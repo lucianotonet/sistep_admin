@@ -17,7 +17,27 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+            'email' => [
+                'required',
+                'string',
+                'lowercase',
+                'email',
+                'max:255',
+                Rule::unique(User::class)->ignore($this->user()->id),
+            ],
+            'user_type' => ['required', 'string', Rule::in(['student', 'psychologist'])],
+            'crp' => [
+                'nullable',
+                'string',
+                'max:255',
+                Rule::requiredIf($this->input('user_type') === 'psychologist'),
+            ],
+            'institution' => [
+                'nullable',
+                'string',
+                'max:255',
+                Rule::requiredIf($this->input('user_type') === 'student'),
+            ],
         ];
     }
 }
