@@ -34,5 +34,11 @@ class DatabaseSeeder extends Seeder
             'crp' => null,
             'institution' => null,        
         ]);
+
+        $this->call([
+            PatientSeeder::class,
+            TestSeeder::class,
+            TestApplicationSeeder::class,
+        ]);
     }
 }
