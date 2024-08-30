@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-            <div class="p-6 sm:p-10 bg-white dark:bg-gray-800 shadow-lg sm:rounded-lg border border-gray-200 dark:border-gray-700">
+            <div class="p-6 sm:p-10 bg-white dark:bg-gray-800 shadow-lg sm:rounded-md border border-gray-200 dark:border-gray-700">
                 <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2 text-center">
                     Compartilhe o teste com o paciente
                 </h3>
@@ -21,7 +21,7 @@
                     Ou peça ao paciente para escanear o código QR abaixo para acessar o teste diretamente em seu dispositivo:
                 </p>
                 <div class="mt-4 flex justify-center">
-                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <div class="bg-gray-100 p-4 rounded-md shadow-md">
                         {!! $testApplication->qr_code !!}
                     </div>
                 </div>
