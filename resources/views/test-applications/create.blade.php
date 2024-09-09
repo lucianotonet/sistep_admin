@@ -108,7 +108,7 @@
                             <button type="button"
                                 class="text-xs font-semibold uppercase leading-6 text-gray-900">Cancela</button>
                             <button type="submit"
-                                class="rounded bg-blue-600 px-6 py-1.5 text-xs font-semibold uppercase text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Salvar
+                                class="rounded bg-blue-600 px-6 py-1.5 text-xs font-semibold uppercase   shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Salvar
                                 e enviar</button>
                         </div>
 

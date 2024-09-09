@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('Profile Information') }}
+            {{ __('Informações do Perfil') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __('Atualize as informações do perfil da sua conta e endereço de e-mail.') }}
         </p>
     </header>
 
@@ -18,7 +18,7 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <x-input-label for="name" :value="__('Nome')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
@@ -31,16 +31,16 @@
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
                 <div>
                     <p class="text-sm mt-2 text-gray-800 dark:text-gray-200">
-                        {{ __('Your email address is unverified.') }}
+                        {{ __('Seu endereço de e-mail não foi verificado.') }}
 
                         <button form="send-verification" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                            {{ __('Click here to re-send the verification email.') }}
+                            {{ __('Clique aqui para reenviar o email de verificação.') }}
                         </button>
                     </p>
 
                     @if (session('status') === 'verification-link-sent')
                         <p class="mt-2 font-medium text-sm text-green-600 dark:text-green-400">
-                            {{ __('A new verification link has been sent to your email address.') }}
+                            {{ __('Um novo link de verificação foi enviado para seu endereço de e-mail.') }}
                         </p>
                     @endif
                 </div>
@@ -51,37 +51,37 @@
 
             <!-- User Type (Student or Psychologist) -->
             <div class="mt-4">
-                <x-input-label :value="__('I am')" />
+                <x-input-label :value="__('Eu sou')" />
                 <div class="flex items-center mt-2">
                     <input id="student" type="radio" name="user_type" value="student" {{ old('user_type', auth()->user()->user_type) === 'student' ? 'checked' : '' }}
                         onclick="toggleCrpField(false); toggleInstitutionField(true);">
-                    <label for="student" class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Student') }}</label>
+                    <label for="student" class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Estudante') }}</label>
                 </div>
                 <div class="flex items-center mt-2">
                     <input id="psychologist" type="radio" name="user_type" value="psychologist" {{ old('user_type', auth()->user()->user_type) === 'psychologist' ? 'checked' : '' }}
                         onclick="toggleCrpField(true); toggleInstitutionField(false);">
                     <label for="psychologist"
-                        class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Psychologist') }}</label>
+                        class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Psicólogo') }}</label>
                 </div>
             </div>
 
             <!-- CRP Field (Hidden by Default) -->
             <div id="crp-field" class="mt-4" style="display: {{ old('user_type', auth()->user()->user_type) === 'psychologist' ? 'block' : 'none' }};">
-                <x-input-label for="crp" :value="__('CRP Number')" />
+                <x-input-label for="crp" :value="__('Número do CRP')" />
                 <x-text-input id="crp" name="crp" type="text" class="mt-1 block w-full" :value="old('crp', auth()->user()->crp)" autocomplete="crp" />
                 <x-input-error class="mt-2" :messages="$errors->get('crp')" />
             </div>
 
             <!-- Institution Field (Hidden by Default) -->
             <div id="institution-field" class="mt-4" style="display: {{ old('user_type', auth()->user()->user_type) === 'student' ? 'block' : 'none' }};">
-                <x-input-label for="institution" :value="__('Institution')" />
+                <x-input-label for="institution" :value="__('Instituição')" />
                 <x-text-input id="institution" name="institution" type="text" class="mt-1 block w-full" :value="old('institution', auth()->user()->institution)" autocomplete="institution" />
                 <x-input-error class="mt-2" :messages="$errors->get('institution')" />
             </div>
         @endif
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Salvar') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p
@@ -90,12 +90,12 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('Saved.') }}</p>
+                >{{ __('Salvo.') }}</p>
             @endif
         </div>
     </form>
     </form>
-</section></section>
+</section>
 
 <script>
     function toggleCrpField(show) {
