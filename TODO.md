@@ -70,44 +70,9 @@ Aqui estão alguns exemplos de outros testes que poderiam ser incluídos no sist
 - Ao concluir o teste, os resultados são calculados com base nas respostas fornecidas e no algoritmo de pontuação específico do teste.
 - O psicólogo acessa a interface administrativa para revisar os resultados, visualizar gráficos, e gerar relatórios.
 
-### 4. Especificação Técnica dos Objetos
-
-#### **Test**:
-```javascript
-{
-  id: "uuid-test",
-  name: "DASS-21",
-  description: "Questionário para avaliar níveis de depressão, ansiedade e estresse.",
-  category: ["depression", "anxiety", "stress"],
-  format: "likert",  // "likert", "multiple_choice", "open_response"
-  questions: [
-    { text: "Eu achei difícil acalmar-me.", type: "likert", options: ["Não", "Um pouco", "Bastante", "O tempo todo"], category: "stress" },
-    { text: "Minha boca ficou seca.", type: "likert", options: ["Não", "Um pouco", "Bastante", "O tempo todo"], category: "anxiety" },
-    // ... mais perguntas
-  ]
-}
-```
-
-#### **TestApplication**:
-```javascript
-{
-  id: "uuid-testApplication",
-  test: "uuid-test",
-  psychologist: "uuid-psychologist",
-  patient: "uuid-patient",
-  applicationDate: "2024-08-18T10:00:00Z",
-  responses: [
-    { questionId: 1, answer: "2" },  // Resposta à pergunta 1
-    { questionId: 2, answer: "1" },  // Resposta à pergunta 2
-    // ... mais respostas
-  ],
-  result: {
-    depression: 10,
-    anxiety: 7,
-    stress: 12
-  },
-  status: "Concluído",  // "Pendente", "Concluído"
-  accessLink: "https://sistep.app/test/dass21/uuid-testApplication",
-  qrCode: "data:image/png;base64,..."
-}
-```
+### 4. Próximos Passos
+- **Implementar CRUD para Testes**: Criar, ler, atualizar e excluir testes psicológicos.
+- **Gerenciamento de Pacientes**: Desenvolver interface para cadastro e gestão de pacientes.
+- **Aplicação de Testes**: Finalizar o fluxo de aplicação de testes, incluindo a geração de links e QR codes.
+- **Análise de Resultados**: Desenvolver funcionalidades para visualização e análise de resultados de testes.
+- **Conformidade com a LGPD**: Garantir que o sistema esteja em conformidade com a LGPD, implementando consentimento informado e criptografia para dados sensíveis.
