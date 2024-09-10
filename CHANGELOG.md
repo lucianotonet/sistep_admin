@@ -1,4 +1,44 @@
 # Changelog
+_[2024-09-10T23:59:33Z](https://github.com/lucianotonet/sistep_admin/commits/3838c07e9ac21324999c6d10f02500c348e66c25)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-10T23:59:26Z](https://github.com/lucianotonet/sistep_admin/commits/7b01bdc3d1841c5480e1b65fff16fb273a07f4d1)_
+### chore: update push command in changelog workflow
+
+- Changed the push command to use --force instead of --force-with-lease in the changelog update workflow.
+- This adjustment simplifies the workflow by removing the lease check, ensuring that the changes are pushed more directly to the main branch without additional conditions.
+
+Considerations:
+- Be cautious when using --force, as it can overwrite changes on the main branch. Further testing may be needed to confirm that this does not lead to unintended consequences.
+
+
+_[2024-09-10T23:57:19Z](https://github.com/lucianotonet/sistep_admin/commits/d626f38d3e773326ff43bf67211a498aeac231dc)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-10T23:57:19Z](https://github.com/lucianotonet/sistep_admin/commits/b64977240783bd69dde21673eb38a93883d6e077)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-10T23:56:21Z](https://github.com/lucianotonet/sistep_admin/commits/75da0c1b3cc332a7d916ebae69cfab91b40fd4ec)_
+### WIP: Melhora na atualização do changelog no fluxo de trabalho do GitHub
+
+- A atualização do fluxo de trabalho evita execuções desnecessárias ao pular a atualização do changelog se a mensagem do commit contiver a tag [skip ci].
+- O passo de criação ou atualização de Pull Request foi removido em favor de um commit direto e forçado para o branch principal, tornando o processo mais eficiente e direto.
+- Essa abordagem simplifica a manipulação do changelog e reduz a complexidade do histórico de commits, facilitando a manutenção futura.
+
+
+_[2024-09-10T23:56:15Z](https://github.com/lucianotonet/sistep_admin/commits/94942260078a8c404dbf5c61c6dc0fc07eab227a)_
+### Merge pull request #11 from lucianotonet/create-pull-request/patch
+
+Atualização do Changelog
+
+
+_[2024-09-10T23:56:04Z](https://github.com/lucianotonet/sistep_admin/commits/84b9eb3c73b54b8c064cb3295f54ec801b4abfae)_
+### [create-pull-request] automated change
+
+
 _[2024-09-10T23:55:54Z](https://github.com/lucianotonet/sistep_admin/commits/fdab689a2dc6d790b1aead4fb0bf0a121ac6b95d)_
 ### Merge pull request #10 from lucianotonet/create-pull-request/patch
 
@@ -136,43 +176,5 @@ _[2024-09-10T22:38:53Z](https://github.com/lucianotonet/sistep_admin/commits/d18
 ### Implementa CRUD 'completo' para gerenciamento de testes
 
 WIP // Adiciona funcionalidades para criar, editar, visualizar e excluir testes, juntamente com as respectivas ações e validações no Controller. Melhora a experiência do usuário com mensagens de sucesso após operações e compreensiva gestão de categorias e perguntas, utilizando JSON para armazenamento. Ajusta permissões de requisições, permitindo que todos os usuários possam criar e atualizar testes. Inclui novas views para interagir com testes, melhorando a estrutura e usabilidade do sistema.
-
-
-_[2024-09-10T21:50:28Z](https://github.com/lucianotonet/sistep_admin/commits/a441e4cbb76c02462254ceb95dbb887eb1c0edd1)_
-### Refatora a documentação e melhora o rodapé
-
-Atualiza a seção de próximos passos na documentação para detalhar as próximas funcionalidades a serem implementadas, incluindo CRUD para testes e conformidade com a LGPD. Além disso, o rodapé da aplicação foi simplificado e estilizado para melhor responsividade e clareza, mantendo a conformidade com as diretrizes de proteção de dados. Essas mudanças visam aprimorar a usabilidade e a organização do projeto, tornando-o mais robusto e alinhado às necessidades dos usuários.
-
-
-_[2024-09-10T21:13:21Z](https://github.com/lucianotonet/sistep_admin/commits/80fa2440d8399baaa9c03b20236a30bbc2264dc4)_
-### Merge branch 'wip'
-
-
-_[2024-09-09T07:46:21Z](https://github.com/lucianotonet/sistep_admin/commits/48e64b783a80ad85d7169bb1704a44f7af9c1972)_
-### Atualiza dependências e refatora componentes da UI
-
-Este commit atualiza várias dependências, como autoprefixer, postcss e tailwindcss, para melhorar a compatibilidade e segurança do projeto. Além disso, foram adicionados novos componentes de botão e uma estrutura de notificação com Vue, aprimorando a interface do usuário e preparando o ambiente para um desenvolvimento mais eficiente. Também inclui melhorias na apresentação visual das páginas de autenticação e redirecionamento, proporcionando uma experiência mais consistente e responsiva ao usuário.
-
-
-_[2024-08-30T07:27:46Z](https://github.com/lucianotonet/sistep_admin/commits/3f67682973b97b2bebf8e6b833bd1fcca90d22a2)_
-### Refatorar javascipt nos formulários e traduções
-
-Atualização de componentes de formulário para melhor legibilidade e consistência, com particular atenção na tradução de elementos para o português. Melhoria da estrutura visual, tornando botões e labels mais uniformes em seus tamanhos e margens. Essas mudanças buscam facilitar a experiência do usuário e garantir que todos os elementos sejam acessíveis e claros em sua apresentação. Além disso, a personalização dos textos para o público alvo melhora a usabilidade do sistema.
-
-
-_[2024-08-21T07:37:37Z](https://github.com/lucianotonet/sistep_admin/commits/53d41c3d6cf6bbb55ada4d9574b18da7630231d0)_
-### Adicionar controle e modelos de pacientes e testes
-
-Implementados novos controladores e modelos para gerenciar pacientes e aplicações de teste, permitindo um cadastro eficiente e a aplicação de testes de forma estruturada. As mudanças incluem rotas, validações e políticas de acesso para garantir a segurança e integridade dos dados. Essas adições facilitam funcionalidades futuras, como a geração de QR codes para acesso aos testes. Além disso, estruturas de seeder e factory foram criadas para facilitar a inserção de dados durante os testes.
-
-
-_[2024-08-19T05:32:55Z](https://github.com/lucianotonet/sistep_admin/commits/633c2143f086de9a781eea171c407db7844ac8ca)_
-### chore: Add MIT License to the project
-
-
-_[2024-08-19T00:11:58Z](https://github.com/lucianotonet/sistep_admin/commits/f7a0a1bf1ed55b29fc9d827122df2210af3eb2c1)_
-### Atualiza documentação do README para o SISTEP Admin
-
-Expandiu e refinou o README, oferecendo uma visão clara das funcionalidades implementadas e das planejadas, além de descrever o fluxo de uso para psicólogos e pacientes. Essas mudanças visam facilitar a compreensão e configuração do sistema, preparando-o para futuros testes psicológicos com suporte flexível para novos formatos e aplicações.
 
 
