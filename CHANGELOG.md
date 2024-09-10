@@ -1,4 +1,14 @@
 # Changelog
+_[2024-09-10T23:56:15Z](https://github.com/lucianotonet/sistep_admin/commits/94942260078a8c404dbf5c61c6dc0fc07eab227a)_
+### Merge pull request #11 from lucianotonet/create-pull-request/patch
+
+Atualização do Changelog
+
+
+_[2024-09-10T23:56:04Z](https://github.com/lucianotonet/sistep_admin/commits/84b9eb3c73b54b8c064cb3295f54ec801b4abfae)_
+### [create-pull-request] automated change
+
+
 _[2024-09-10T23:55:54Z](https://github.com/lucianotonet/sistep_admin/commits/fdab689a2dc6d790b1aead4fb0bf0a121ac6b95d)_
 ### Merge pull request #10 from lucianotonet/create-pull-request/patch
 
@@ -164,15 +174,5 @@ _[2024-08-21T07:37:37Z](https://github.com/lucianotonet/sistep_admin/commits/53d
 ### Adicionar controle e modelos de pacientes e testes
 
 Implementados novos controladores e modelos para gerenciar pacientes e aplicações de teste, permitindo um cadastro eficiente e a aplicação de testes de forma estruturada. As mudanças incluem rotas, validações e políticas de acesso para garantir a segurança e integridade dos dados. Essas adições facilitam funcionalidades futuras, como a geração de QR codes para acesso aos testes. Além disso, estruturas de seeder e factory foram criadas para facilitar a inserção de dados durante os testes.
-
-
-_[2024-08-19T05:32:55Z](https://github.com/lucianotonet/sistep_admin/commits/633c2143f086de9a781eea171c407db7844ac8ca)_
-### chore: Add MIT License to the project
-
-
-_[2024-08-19T00:11:58Z](https://github.com/lucianotonet/sistep_admin/commits/f7a0a1bf1ed55b29fc9d827122df2210af3eb2c1)_
-### Atualiza documentação do README para o SISTEP Admin
-
-Expandiu e refinou o README, oferecendo uma visão clara das funcionalidades implementadas e das planejadas, além de descrever o fluxo de uso para psicólogos e pacientes. Essas mudanças visam facilitar a compreensão e configuração do sistema, preparando-o para futuros testes psicológicos com suporte flexível para novos formatos e aplicações.
 
 
