@@ -35,8 +35,7 @@ jobs:
         with:
           title: 'Atualização do Changelog'
           body: 'O changelog foi atualizado automaticamente.'
-          base: main
-          branch: changelog-update
+          base: main          
 
     permissions:
       contents: write
