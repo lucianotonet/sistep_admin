@@ -30,10 +30,7 @@ echo "$commits" | jq -r '.[] | "_[" + .commit.author.date + "](https://github.co
 
 # Atualiza o arquivo Changelog com o temporário
 if mv "$TEMP_FILE" "$CHANGELOG_FILE"; then
-    if ! cp "$CHANGELOG_FILE" "./public/$CHANGELOG_FILE"; then
-        echo "Error: Falha ao copiar $CHANGELOG_FILE para /public/."
-        exit 1
-    fi
+    echo "Changelog atualizado com sucesso!"
 else
     echo "Error: Falha ao mover $TEMP_FILE para $CHANGELOG_FILE."
     exit 1
