@@ -17,7 +17,9 @@
                     Bem-vindo ao SISTEP!                    
 
                     <div>
-                        <Alert>Botão Vue</Alert>
+                        <Alert type="success">
+                            <p>Teste</p>
+                        </Alert>
                     </div>
                 </div>
             </div>
