@@ -1,4 +1,28 @@
 # Changelog
+_[2024-09-10T23:37:40Z](https://github.com/lucianotonet/sistep_admin/commits/b41403e4e5e42e17f5fe11fc947a1ff7e80c725a)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-10T23:37:01Z](https://github.com/lucianotonet/sistep_admin/commits/5625f7de3f0e6d5c31b7e33772487c777f50a3b6)_
+### feat: Atualizar fluxo de geração de changelog e remover arquivo público desnecessário
+
+- Introduzida uma condição para evitar que o bot do GitHub atualize o changelog, garantindo que apenas ações explícitas de desenvolvedores sejam registradas. Isso melhora a clareza e a relevância das alterações documentadas, evitando entradas automáticas que podem não refletir mudanças reais no código.
+
+- O processo de atualização do changelog agora inclui uma mensagem de sucesso, simplificando o feedback ao usuário após a execução. A remoção do arquivo CHANGELOG.md da pasta pública reduz a confusão sobre onde encontrar o changelog atualizado, centralizando a informação apenas em um local.
+
+Essas melhorias visam aprimorar a experiência do desenvolvedor e a transparência no controle de versões, ao mesmo tempo que simplificam a estrutura de arquivos do projeto.
+
+
+_[2024-09-10T23:23:26Z](https://github.com/lucianotonet/sistep_admin/commits/bfa5eef208abdbac9a048542c406ae3816d2609e)_
+### Merge pull request #5 from lucianotonet/changelog-update
+
+Atualização do Changelog
+
+
+_[2024-09-10T23:18:29Z](https://github.com/lucianotonet/sistep_admin/commits/c5c158543c7d7bf83d4ae693731e3b6b940b9760)_
+### [create-pull-request] automated change
+
+
 _[2024-09-10T23:18:06Z](https://github.com/lucianotonet/sistep_admin/commits/2ddfdc0917a3bf03b43c1b7b7ea3be7389a0ee54)_
 ### chore: update changelog workflow configuration
 
