@@ -34,3 +34,6 @@ jobs:
           body: 'O changelog foi atualizado automaticamente.'
           base: main
           branch: changelog-update  # Alterado de 'head' para 'branch'
+
+    permissions:
+      contents: write  # Adiciona permissão para escrever no repositório
