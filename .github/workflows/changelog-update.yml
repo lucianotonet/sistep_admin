@@ -1,0 +1,36 @@
+name: Atualizar Changelog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Configurar Git
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+
+      - name: Executar script de geração de changelog
+        run: bash CHANGELOG_GEN.sh
+
+      - name: Verificar se o changelog foi alterado
+        id: changelog-check
+        run: |
+          git diff --exit-code CHANGELOG.md || echo "changed=true" >> $GITHUB_ENV
+
+      - name: Criar Pull Request
+        if: env.changed == 'true'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: 'Atualização do Changelog'
+          body: 'O changelog foi atualizado automaticamente.'
+          base: main
+          head: changelog-update
