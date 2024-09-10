@@ -1,4 +1,14 @@
 # Changelog
+_[2024-09-10T23:39:37Z](https://github.com/lucianotonet/sistep_admin/commits/04191e49e7555e897844d240fb066ffac11f031f)_
+### Merge pull request #7 from lucianotonet/changelog-update
+
+Atualização do Changelog
+
+
+_[2024-09-10T23:38:04Z](https://github.com/lucianotonet/sistep_admin/commits/9853de017eb8dd4b4a29069e7a4ca2bfcdb3522b)_
+### [create-pull-request] automated change
+
+
 _[2024-09-10T23:37:40Z](https://github.com/lucianotonet/sistep_admin/commits/b41403e4e5e42e17f5fe11fc947a1ff7e80c725a)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
