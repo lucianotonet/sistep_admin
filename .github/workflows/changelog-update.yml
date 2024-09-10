@@ -7,7 +7,7 @@ on:
 
 jobs:
   update-changelog:
-    if: github.actor != 'github-actions[bot]'
+    if: github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[skip ci]')
     runs-on: ubuntu-latest
 
     steps:
@@ -29,15 +29,12 @@ jobs:
         run: |
           git diff --exit-code CHANGELOG.md || echo "changed=true" >> $GITHUB_ENV
 
-      - name: Criar ou atualizar Pull Request
-        if: env.changed == 'true' && github.event_name != 'pull_request'
-        uses: peter-evans/create-pull-request@v4
-        with:
-          title: 'Atualização do Changelog'
-          body: 'O changelog foi atualizado automaticamente.'
-          base: main
-          branch: changelog-update
+      - name: Commit e push das alterações
+        if: env.changed == 'true'
+        run: |
+          git add CHANGELOG.md
+          git commit --amend --no-edit
+          git push --force-with-lease origin main
 
     permissions:
       contents: write
-      pull-requests: write
