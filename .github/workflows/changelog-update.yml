@@ -32,8 +32,8 @@ jobs:
         with:
           title: 'Atualização do Changelog'
           body: 'O changelog foi atualizado automaticamente.'
-          base: main
-          branch: changelog-update  # Alterado de 'head' para 'branch'
+          base: lucianotonet/sistep_admin
+          head: changelog-update
 
     permissions:
-      contents: write  # Adiciona permissão para escrever no repositório
+      contents: write
