@@ -1,4 +1,14 @@
 # Changelog
+_[2024-09-10T23:55:54Z](https://github.com/lucianotonet/sistep_admin/commits/fdab689a2dc6d790b1aead4fb0bf0a121ac6b95d)_
+### Merge pull request #10 from lucianotonet/create-pull-request/patch
+
+Atualização do Changelog
+
+
+_[2024-09-10T23:54:15Z](https://github.com/lucianotonet/sistep_admin/commits/0b8cbe8ec54390b4c9e014b3cbe7d41c6a9d30dc)_
+### [create-pull-request] automated change
+
+
 _[2024-09-10T23:54:02Z](https://github.com/lucianotonet/sistep_admin/commits/9410c763c30b68d1c850643c876c50179908e1bd)_
 ### Update changelog-update.yml
 
@@ -164,17 +174,5 @@ _[2024-08-19T00:11:58Z](https://github.com/lucianotonet/sistep_admin/commits/f7a
 ### Atualiza documentação do README para o SISTEP Admin
 
 Expandiu e refinou o README, oferecendo uma visão clara das funcionalidades implementadas e das planejadas, além de descrever o fluxo de uso para psicólogos e pacientes. Essas mudanças visam facilitar a compreensão e configuração do sistema, preparando-o para futuros testes psicológicos com suporte flexível para novos formatos e aplicações.
-
-
-_[2024-08-17T08:00:06Z](https://github.com/lucianotonet/sistep_admin/commits/19dc0b2cb4907f84b596ff01563fe7be069dea1b)_
-### feat: Add user_type, crp, and institution fields to User model, views, and migrations
-
-feat: Enhance User model with user_type, crp, institution
-
-Added fields for user type, CRP number, and institution to improve user management. This enables distinct roles for students and psychologists, enforcing required fields for each type. Adjustments to validation rules and front-end logic ensure a better user experience when updating profiles.
-
-
-_[2024-08-17T07:19:18Z](https://github.com/lucianotonet/sistep_admin/commits/525dfc035a94f7be3f73d9cafaf2d2db10e86e32)_
-### chore: Add user_type, crp, and institution fields to User model, views, and migrations
 
 
