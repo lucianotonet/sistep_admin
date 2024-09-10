@@ -15,8 +15,8 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col justify-between">
+            <x-application-header />            
 
             <!-- Page Heading -->
             @isset($header)
@@ -28,9 +28,10 @@
             @endisset
 
             <!-- Page Content -->
-            <main>
+            <main id="app" class="flex flex-col flex-grow">
                 {{ $slot }}
             </main>
+            <x-application-footer />
         </div>
     </body>
 </html>

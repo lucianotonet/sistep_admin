@@ -24,4 +24,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/test-applications/{testApplication}/share', [TestApplicationController::class, 'share'])->name('test-applications.share');
 });
 
+Route::get('/tcle', function () {
+    return view('tcle');
+})->name('tcle');
+
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/cookies', function () {
+    return view('cookies');
+})->name('cookies');
+
 require __DIR__.'/auth.php';
