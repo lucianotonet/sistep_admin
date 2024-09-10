@@ -29,7 +29,7 @@ jobs:
         run: |
           git diff --exit-code CHANGELOG.md || echo "changed=true" >> $GITHUB_ENV
 
-      - name: Criar Pull Request
+      - name: Criar ou atualizar Pull Request
         if: env.changed == 'true' && github.event_name != 'pull_request'
         uses: peter-evans/create-pull-request@v4
         with:
@@ -37,9 +37,6 @@ jobs:
           body: 'O changelog foi atualizado automaticamente.'
           base: main
           branch: changelog-update
-          # Adicionando tratamento para pull request existente
-          update: true
-          fetch: true
 
     permissions:
       contents: write
