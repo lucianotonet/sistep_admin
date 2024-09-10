@@ -1,4 +1,14 @@
 # Changelog
+_[2024-09-10T23:23:26Z](https://github.com/lucianotonet/sistep_admin/commits/bfa5eef208abdbac9a048542c406ae3816d2609e)_
+### Merge pull request #5 from lucianotonet/changelog-update
+
+Atualização do Changelog
+
+
+_[2024-09-10T23:18:29Z](https://github.com/lucianotonet/sistep_admin/commits/c5c158543c7d7bf83d4ae693731e3b6b940b9760)_
+### [create-pull-request] automated change
+
+
 _[2024-09-10T23:18:06Z](https://github.com/lucianotonet/sistep_admin/commits/2ddfdc0917a3bf03b43c1b7b7ea3be7389a0ee54)_
 ### chore: update changelog workflow configuration
 
