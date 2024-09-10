@@ -30,7 +30,7 @@ jobs:
           git diff --exit-code CHANGELOG.md || echo "changed=true" >> $GITHUB_ENV
 
       - name: Criar Pull Request
-        if: env.changed == 'true'
+        if: env.changed == 'true' && github.event_name != 'pull_request'
         uses: peter-evans/create-pull-request@v4
         with:
           title: 'Atualização do Changelog'
