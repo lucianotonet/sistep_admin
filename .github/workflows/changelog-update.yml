@@ -33,4 +33,4 @@ jobs:
           title: 'Atualização do Changelog'
           body: 'O changelog foi atualizado automaticamente.'
           base: main
-          head: changelog-update
+          branch: changelog-update  # Alterado de 'head' para 'branch'
