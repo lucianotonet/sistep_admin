@@ -37,6 +37,9 @@ jobs:
           body: 'O changelog foi atualizado automaticamente.'
           base: main
           branch: changelog-update
+          # Adicionando tratamento para pull request existente
+          update: true
+          fetch: true
 
     permissions:
       contents: write
