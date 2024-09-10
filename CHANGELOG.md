@@ -1,4 +1,42 @@
 # Changelog
+_[2024-09-10T23:47:17Z](https://github.com/lucianotonet/sistep_admin/commits/e837534986eca7c41bf75f936f1cfdcdb596d7aa)_
+### feat(changelog): improve pull request handling for changelog updates
+
+- Renamed the step to reflect that it can now either create or update a pull request, enhancing clarity in the workflow.
+- Removed unnecessary options for handling existing pull requests, streamlining the process and reducing potential confusion.
+- This change ensures that updates to the changelog are managed more effectively, improving automation and maintaining consistency in project documentation.
+
+
+_[2024-09-10T23:44:21Z](https://github.com/lucianotonet/sistep_admin/commits/a2a22288f409aa82bfe403d2cf2877f984ad2861)_
+### WIP: Add handling for existing pull requests in changelog update workflow
+
+- Implemented updates to the changelog update workflow
+- Added functionality to handle existing pull requests, allowing for automatic updates without conflicts
+- Enhanced the fetch capability to ensure the latest changes are always considered during the update process, promoting better synchronization and reducing manual intervention
+
+
+_[2024-09-10T23:42:50Z](https://github.com/lucianotonet/sistep_admin/commits/05949771c50b38f00fc88583dc5d7e021643b51c)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-10T23:42:44Z](https://github.com/lucianotonet/sistep_admin/commits/9415c0dd707de81baa0640f8c21eaad8d0f469eb)_
+### feat: Update changelog workflow conditions
+
+- Adjusted the conditional check for creating a pull request to prevent unnecessary updates during pull_request events. This ensures that the changelog is only updated when changes occur outside of ongoing pull requests, streamlining the workflow and reducing clutter in the repository.
+
+- By implementing this change, we improve the efficiency of the changelog management process and enhance clarity in our pull request activities.
+
+
+_[2024-09-10T23:40:49Z](https://github.com/lucianotonet/sistep_admin/commits/9227290ea67502701879986567acab6c50af74b9)_
+### Merge pull request #8 from lucianotonet/changelog-update
+
+Atualização do Changelog
+
+
+_[2024-09-10T23:39:51Z](https://github.com/lucianotonet/sistep_admin/commits/cd49caae575cfdd64d53489c15ef06f2d8b54d2e)_
+### [create-pull-request] automated change
+
+
 _[2024-09-10T23:39:37Z](https://github.com/lucianotonet/sistep_admin/commits/04191e49e7555e897844d240fb066ffac11f031f)_
 ### Merge pull request #7 from lucianotonet/changelog-update
 
@@ -138,9 +176,5 @@ _[2024-08-17T07:19:18Z](https://github.com/lucianotonet/sistep_admin/commits/525
 
 _[2024-08-17T06:19:01Z](https://github.com/lucianotonet/sistep_admin/commits/ff8d48454185c12182ed4f7224b88fcb2eefb517)_
 ### Install Breeze
-
-
-_[2024-08-17T06:16:56Z](https://github.com/lucianotonet/sistep_admin/commits/8b3c2a0b3433281bc77ce8750a0d1c2b0619fa54)_
-### Set up a fresh Laravel app
 
 
