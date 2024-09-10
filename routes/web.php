@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestApplicationController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,6 +24,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/test-applications/{testApplication}', [TestApplicationController::class, 'show'])->name('test-applications.show');
     Route::get('/test-applications/{testApplication}/share', [TestApplicationController::class, 'share'])->name('test-applications.share');
 });
+
+Route::resource('tests', TestController::class);
 
 Route::get('/tcle', function () {
     return view('tcle');
