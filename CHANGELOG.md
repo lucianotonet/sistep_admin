@@ -1,4 +1,37 @@
 # Changelog
+_[2024-09-11T03:48:05Z](https://github.com/lucianotonet/sistep_admin/commits/787e14f8c22e39e897faf38aa7a9f0c13b253897)_
+### WIP: Adiciona novos recursos e melhorias
+
+- Inclui a dependência de tipografia do Tailwind para melhorar o estilo do texto e a consistência visual em toda a aplicação.
+- Adiciona uma nova rota e visualização para o changelog, permitindo que os usuários acessem facilmente as atualizações e mudanças na documentação.
+- Atualiza o rodapé da aplicação para incluir um link para o changelog, facilitando o acesso e a transparência para os usuários sobre o histórico de alterações.
+
+Essas mudanças visam aprimorar a usabilidade e a apresentação do conteúdo, proporcionando uma melhor experiência ao usuário e mantendo a aplicação informada sobre suas atualizações.
+
+
+_[2024-09-11T00:20:41Z](https://github.com/lucianotonet/sistep_admin/commits/3a78830f375f8c280f5e20ac4eb80444e519bac1)_
+### Merge remote-tracking branch 'origin/main'
+
+
+_[2024-09-11T00:17:04Z](https://github.com/lucianotonet/sistep_admin/commits/bd2bd2b7e324912fac84273656998977c0186125)_
+### feat(todos): update changelog and enhance test index
+
+- Adicionado link atualizado no changelog para refletir as últimas alterações de commit.
+- Marcado o item de CRUD para Testes como concluído no documento de tarefas.
+
+  O status atualizado fornece clareza sobre o progresso e permite gerenciamento eficaz das etapas restantes do projeto.
+
+- Estrutura de planejamento ampliada, detalhando as próximas ações em desenvolvimento, incluindo gerenciamento de pacientes e conformidade com a LGPD.
+
+  Esse planejamento aprimorado serve para orientar o foco da equipe em tarefas críticas e garantir a implementação de requisitos legais.
+
+- Adicionada uma mensagem de sucesso na visualização dos testes, melhorando a experiência do usuário ao confirmar operações realizadas com sucesso.
+
+Essa atualização visa melhorar a comunicação do progresso do projeto, a usabilidade e a conformidade com regulamentações necessárias.
+
+WIP: as implementações futuras para análise de resultados e finalização do fluxo são necessárias para concluir o projeto.
+
+
 _[2024-09-11T00:17:04Z](https://github.com/lucianotonet/sistep_admin/commits/48c25ccd0dbf70f443dc55fd1db393523536618a)_
 ### feat(todos): update changelog and enhance test index
 
@@ -173,21 +206,5 @@ _[2024-09-10T22:59:58Z](https://github.com/lucianotonet/sistep_admin/commits/117
 ### Aprimora permissões de workflow para o changelog
 
 Atualiza as permissões do workflow para permitir que o changelog seja escrito diretamente no repositório, melhorando a automação do processo de atualização. Essa mudança visa facilitar a manutenção do changelog e garantir que as atualizações sejam acionadas de forma mais eficiente.
-
-
-_[2024-09-10T22:57:32Z](https://github.com/lucianotonet/sistep_admin/commits/e065e3c21e5fe66b0ba1e9d7348b60d8765b05dc)_
-### Fix: "Warning: Unexpected input(s) 'head'"
-
-
-_[2024-09-10T22:55:05Z](https://github.com/lucianotonet/sistep_admin/commits/1c4d4cdf53a3f4a5cdb3ac621b1279d60f3e47c5)_
-### Atualiza workflow para geração automática de changelog
-
-Adiciona um workflow que gera automaticamente o changelog ao fazer push na branch principal. Isso garante que as atualizações de changelog sejam sempre capturadas e que os desenvolvedores sejam notificados sobre alterações, melhorando a rastreabilidade das mudanças e a comunicação entre os membros da equipe.
-
-
-_[2024-09-10T22:50:55Z](https://github.com/lucianotonet/sistep_admin/commits/32ef3f5e6eda3a4428b18215c43e51c2084b65c9)_
-### Adiciona changelog e script para geração automática
-
-Inclui um novo arquivo de changelog para documentar as alterações no projeto de forma clara e acessível. Com a adição do script de geração automática, é possível atualizar facilmente o changelog com base nos commits do GitHub, garantindo que as informações relevantes estejam sempre disponíveis. Essas melhorias visam facilitar a comunicação de mudanças entre a equipe e usuários, além de manter a documentação mais organizada e atualizada.
 
 
