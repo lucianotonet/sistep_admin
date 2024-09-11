@@ -1,4 +1,23 @@
 # Changelog
+_[2024-09-11T00:17:04Z](https://github.com/lucianotonet/sistep_admin/commits/48c25ccd0dbf70f443dc55fd1db393523536618a)_
+### feat(todos): update changelog and enhance test index
+
+- Adicionado link atualizado no changelog para refletir as últimas alterações de commit.
+- Marcado o item de CRUD para Testes como concluído no documento de tarefas.
+
+  O status atualizado fornece clareza sobre o progresso e permite gerenciamento eficaz das etapas restantes do projeto.
+
+- Estrutura de planejamento ampliada, detalhando as próximas ações em desenvolvimento, incluindo gerenciamento de pacientes e conformidade com a LGPD.
+
+  Esse planejamento aprimorado serve para orientar o foco da equipe em tarefas críticas e garantir a implementação de requisitos legais.
+
+- Adicionada uma mensagem de sucesso na visualização dos testes, melhorando a experiência do usuário ao confirmar operações realizadas com sucesso.
+
+Essa atualização visa melhorar a comunicação do progresso do projeto, a usabilidade e a conformidade com regulamentações necessárias.
+
+WIP: as implementações futuras para análise de resultados e finalização do fluxo são necessárias para concluir o projeto.
+
+
 _[2024-09-10T23:59:33Z](https://github.com/lucianotonet/sistep_admin/commits/3dae883b766ae3c3af32b3fbee53e420315749cd)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -170,11 +189,5 @@ _[2024-09-10T22:50:55Z](https://github.com/lucianotonet/sistep_admin/commits/32e
 ### Adiciona changelog e script para geração automática
 
 Inclui um novo arquivo de changelog para documentar as alterações no projeto de forma clara e acessível. Com a adição do script de geração automática, é possível atualizar facilmente o changelog com base nos commits do GitHub, garantindo que as informações relevantes estejam sempre disponíveis. Essas melhorias visam facilitar a comunicação de mudanças entre a equipe e usuários, além de manter a documentação mais organizada e atualizada.
-
-
-_[2024-09-10T22:38:53Z](https://github.com/lucianotonet/sistep_admin/commits/d18db603c0f4ad8bd5fb368257d6f27d83e1d3eb)_
-### Implementa CRUD 'completo' para gerenciamento de testes
-
-WIP // Adiciona funcionalidades para criar, editar, visualizar e excluir testes, juntamente com as respectivas ações e validações no Controller. Melhora a experiência do usuário com mensagens de sucesso após operações e compreensiva gestão de categorias e perguntas, utilizando JSON para armazenamento. Ajusta permissões de requisições, permitindo que todos os usuários possam criar e atualizar testes. Inclui novas views para interagir com testes, melhorando a estrutura e usabilidade do sistema.
 
 
