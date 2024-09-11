@@ -1,5 +1,5 @@
 # Changelog
-_[2024-09-10T23:59:33Z](https://github.com/lucianotonet/sistep_admin/commits/3838c07e9ac21324999c6d10f02500c348e66c25)_
+_[2024-09-10T23:59:33Z](https://github.com/lucianotonet/sistep_admin/commits/3dae883b766ae3c3af32b3fbee53e420315749cd)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
 
