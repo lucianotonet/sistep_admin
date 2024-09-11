@@ -71,8 +71,15 @@ Aqui estão alguns exemplos de outros testes que poderiam ser incluídos no sist
 - O psicólogo acessa a interface administrativa para revisar os resultados, visualizar gráficos, e gerar relatórios.
 
 ### 4. Próximos Passos
-- **Implementar CRUD para Testes**: Criar, ler, atualizar e excluir testes psicológicos.
+- **Implementar CRUD para Testes**: Criar, ler, atualizar e excluir testes psicológicos. ✅ (Concluído)
 - **Gerenciamento de Pacientes**: Desenvolver interface para cadastro e gestão de pacientes.
 - **Aplicação de Testes**: Finalizar o fluxo de aplicação de testes, incluindo a geração de links e QR codes.
 - **Análise de Resultados**: Desenvolver funcionalidades para visualização e análise de resultados de testes.
 - **Conformidade com a LGPD**: Garantir que o sistema esteja em conformidade com a LGPD, implementando consentimento informado e criptografia para dados sensíveis.
+
+### Planejamento
+1. **Finalizar a implementação do CRUD para testes**: Garantir que todas as operações de criação, leitura, atualização e exclusão estejam funcionando corretamente.
+2. **Desenvolver a interface de gerenciamento de pacientes**: Permitir que psicólogos possam cadastrar e gerenciar informações dos pacientes.
+3. **Testar o fluxo de aplicação de testes**: Verificar se a geração de links e QR codes está funcionando como esperado.
+4. **Implementar a análise de resultados**: Criar gráficos e relatórios que ajudem na visualização dos dados coletados.
+5. **Revisar a conformidade com a LGPD**: Implementar as medidas necessárias para garantir a proteção dos dados dos usuários.
