@@ -13,6 +13,9 @@
         <div class="flex flex-col w-full text-left md:flex-row mt-1 md:mt-0 md:w-1/2">
             <div
                 class="flex flex-col flex-grow text-xs md:text-sm md:items-end xl:flex-row md:justify-end gap-0 xl:gap-6 min-h-full">
+                <a href="{{ route('changelog') }}" class="">
+                    Changelog
+                </a>
                 <a href="{{ route('tcle') }}" class="">
                     Termo de Consentimento Livre e Esclarecido
                 </a>

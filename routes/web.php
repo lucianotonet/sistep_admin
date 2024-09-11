@@ -39,4 +39,8 @@ Route::get('/cookies', function () {
     return view('cookies');
 })->name('cookies');
 
+Route::get('/changelog', function () {
+    return view('changelog');
+})->name('changelog');
+
 require __DIR__.'/auth.php';
