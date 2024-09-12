@@ -12,14 +12,17 @@ test('profile page is displayed', function () {
     $response->assertOk();
 });
 
-test('profile information can be updated', function () {
-    $user = User::factory()->create();
+test('profile information can be updated for student', function () {
+    $user = User::factory()->create(['user_type' => 'student']);
 
     $response = $this
         ->actingAs($user)
         ->patch('/profile', [
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Test Student',
+            'email' => 'student@example.com',
+            'user_type' => 'student',
+            'institution' => 'Test Institution',
+            'crp' => null,
         ]);
 
     $response
@@ -28,19 +31,46 @@ test('profile information can be updated', function () {
 
     $user->refresh();
 
-    $this->assertSame('Test User', $user->name);
-    $this->assertSame('test@example.com', $user->email);
+    $this->assertSame('Test Student', $user->name);
+    $this->assertSame('student@example.com', $user->email);
     $this->assertNull($user->email_verified_at);
 });
 
-test('email verification status is unchanged when the email address is unchanged', function () {
-    $user = User::factory()->create();
+test('profile information can be updated for psychologist', function () {
+    $user = User::factory()->create(['user_type' => 'psychologist']);
 
     $response = $this
         ->actingAs($user)
         ->patch('/profile', [
-            'name' => 'Test User',
+            'name' => 'Test Psychologist',
+            'email' => 'psychologist@example.com',
+            'user_type' => 'psychologist',
+            'institution' => null,
+            'crp' => '123456',
+        ]);
+
+    $response
+        ->assertSessionHasNoErrors()
+        ->assertRedirect('/profile');
+
+    $user->refresh();
+
+    $this->assertSame('Test Psychologist', $user->name);
+    $this->assertSame('psychologist@example.com', $user->email);
+    $this->assertNull($user->email_verified_at);
+});
+
+test('email verification status is unchanged when the email address is unchanged', function () {
+    $user = User::factory()->create(['user_type' => 'student']);
+
+    $response = $this
+        ->actingAs($user)
+        ->patch('/profile', [
+            'name' => 'Test Student',
             'email' => $user->email,
+            'user_type' => 'student',
+            'institution' => 'Test Institution',
+            'crp' => null,
         ]);
 
     $response
