@@ -1,4 +1,37 @@
 # Changelog
+_[2024-09-12T23:23:41Z](https://github.com/lucianotonet/sistep_admin/commits/16813a23e6a7b9678121185f731722f18c9523ef)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:23:34Z](https://github.com/lucianotonet/sistep_admin/commits/e9b37bad51468d57e7e68af5dec320a54f83548a)_
+### feat: downgrade PHP setup action to improve stability
+
+- Replaced the setup-php GitHub Action from version 3 to version 2.
+- This change mitigates potential compatibility issues with existing workflows, ensuring a smoother deployment process with PHP 8.2.
+
+Consider monitoring the effects post-deployment to identify any further enhancements needed for the PHP environment.
+
+
+_[2024-09-12T23:22:39Z](https://github.com/lucianotonet/sistep_admin/commits/d894c280fff52217326e7b1d20752b8670ef97e7)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:22:39Z](https://github.com/lucianotonet/sistep_admin/commits/8595d85722e71c3d8f4b6d09b9037ae935596d14)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:22:33Z](https://github.com/lucianotonet/sistep_admin/commits/883909a967cd59636cc3cb662bcb63bb523c6662)_
+### feat(deploy): downgrade PHP setup action version
+
+- Altered the PHP setup action from version 4 to version 3 to maintain compatibility with current workflow requirements.
+
+- This change helps prevent potential issues arising from the newer version, ensuring a stable deployment process and minimizing disruptions in the CI/CD pipeline.
+
+
+_[2024-09-12T23:21:15Z](https://github.com/lucianotonet/sistep_admin/commits/75d65da13ca692a61d73c132c7177c21cee72d4a)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
 _[2024-09-12T23:21:15Z](https://github.com/lucianotonet/sistep_admin/commits/ee74c29a54ce5ac25407c4c9c81b3f22f6555c21)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -173,44 +206,5 @@ _[2024-09-10T23:39:37Z](https://github.com/lucianotonet/sistep_admin/commits/041
 ### Merge pull request #7 from lucianotonet/changelog-update
 
 Atualização do Changelog
-
-
-_[2024-09-10T23:38:04Z](https://github.com/lucianotonet/sistep_admin/commits/9853de017eb8dd4b4a29069e7a4ca2bfcdb3522b)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:37:40Z](https://github.com/lucianotonet/sistep_admin/commits/b41403e4e5e42e17f5fe11fc947a1ff7e80c725a)_
-### Merge branch 'main' of github.com:lucianotonet/sistep_admin
-
-
-_[2024-09-10T23:37:01Z](https://github.com/lucianotonet/sistep_admin/commits/5625f7de3f0e6d5c31b7e33772487c777f50a3b6)_
-### feat: Atualizar fluxo de geração de changelog e remover arquivo público desnecessário
-
-- Introduzida uma condição para evitar que o bot do GitHub atualize o changelog, garantindo que apenas ações explícitas de desenvolvedores sejam registradas. Isso melhora a clareza e a relevância das alterações documentadas, evitando entradas automáticas que podem não refletir mudanças reais no código.
-
-- O processo de atualização do changelog agora inclui uma mensagem de sucesso, simplificando o feedback ao usuário após a execução. A remoção do arquivo CHANGELOG.md da pasta pública reduz a confusão sobre onde encontrar o changelog atualizado, centralizando a informação apenas em um local.
-
-Essas melhorias visam aprimorar a experiência do desenvolvedor e a transparência no controle de versões, ao mesmo tempo que simplificam a estrutura de arquivos do projeto.
-
-
-_[2024-09-10T23:23:26Z](https://github.com/lucianotonet/sistep_admin/commits/bfa5eef208abdbac9a048542c406ae3816d2609e)_
-### Merge pull request #5 from lucianotonet/changelog-update
-
-Atualização do Changelog
-
-
-_[2024-09-10T23:18:29Z](https://github.com/lucianotonet/sistep_admin/commits/c5c158543c7d7bf83d4ae693731e3b6b940b9760)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:18:06Z](https://github.com/lucianotonet/sistep_admin/commits/2ddfdc0917a3bf03b43c1b7b7ea3be7389a0ee54)_
-### chore: update changelog workflow configuration
-
-- Set fetch depth to 0 in the checkout step to ensure the full repository history is available, facilitating better changelog generation and visibility into changes.
-- Upgrade to version 4 of the create-pull-request action for enhanced features and bug fixes.
-- Change the base branch for the pull request to 'main', aligning with repository standards for smoother integration.
-- Explicitly grant permissions for pull requests, reinforcing workflow security and ensuring the action can create pull requests as intended.
-
-These improvements streamline the changelog update process and enhance maintainability.
 
 
