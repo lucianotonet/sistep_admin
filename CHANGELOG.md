@@ -1,4 +1,42 @@
 # Changelog
+_[2024-09-12T23:31:29Z](https://github.com/lucianotonet/sistep_admin/commits/f243a401829bc3d2109b25a4af1680ffadad79af)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:31:23Z](https://github.com/lucianotonet/sistep_admin/commits/743946787215a69e8317a9f79e3689d9378ed825)_
+### WIP: Reorganize deployment workflow to optimize asset building
+
+- Moved the installation and building of Yarn dependencies earlier in the deployment process. This ensures that assets are built before running Laravel tests, leading to a more efficient workflow and reducing potential errors related to missing assets during testing.
+
+- Removed duplicated Yarn installation and build steps to streamline the process, improving clarity and maintainability of the deployment configuration.
+
+These changes aim to optimize the deployment pipeline, making it more robust and efficient.
+
+
+_[2024-09-12T23:29:09Z](https://github.com/lucianotonet/sistep_admin/commits/3c11e0bfd32451065903753dd4af40ef8a9093ce)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:29:09Z](https://github.com/lucianotonet/sistep_admin/commits/f618c40af0447d0bde01d57b9e6ba2c42b340d50)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:29:02Z](https://github.com/lucianotonet/sistep_admin/commits/fffcf5ecaa859cce5b7bd2f30f78d26cea35fd73)_
+### feat(auth, profile): enhance registration and profile update functionality for user types
+
+- Updated registration tests to allow for user type selection (student and psychologist), ensuring that each type can provide relevant information during registration. This improvement supports a more versatile user onboarding process.
+
+- Modified profile update tests to reflect both student and psychologist contexts, verifying that users can update their details appropriately based on their role. This aligns with the application’s requirement to handle different user types distinctly.
+
+- Overall, these changes improve the robustness of user authentication and profile management by accommodating varying user types, ultimately enhancing user experience and promoting accurate data handling.
+
+WIP: Additional validations and edge cases could be explored in future updates.
+
+
+_[2024-09-12T23:23:41Z](https://github.com/lucianotonet/sistep_admin/commits/f3eec79527b53c65a3083b58c3ea4161a8e3a0c2)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
 _[2024-09-12T23:23:41Z](https://github.com/lucianotonet/sistep_admin/commits/16813a23e6a7b9678121185f731722f18c9523ef)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -170,41 +208,5 @@ _[2024-09-10T23:47:17Z](https://github.com/lucianotonet/sistep_admin/commits/e83
 - Renamed the step to reflect that it can now either create or update a pull request, enhancing clarity in the workflow.
 - Removed unnecessary options for handling existing pull requests, streamlining the process and reducing potential confusion.
 - This change ensures that updates to the changelog are managed more effectively, improving automation and maintaining consistency in project documentation.
-
-
-_[2024-09-10T23:44:21Z](https://github.com/lucianotonet/sistep_admin/commits/a2a22288f409aa82bfe403d2cf2877f984ad2861)_
-### WIP: Add handling for existing pull requests in changelog update workflow
-
-- Implemented updates to the changelog update workflow
-- Added functionality to handle existing pull requests, allowing for automatic updates without conflicts
-- Enhanced the fetch capability to ensure the latest changes are always considered during the update process, promoting better synchronization and reducing manual intervention
-
-
-_[2024-09-10T23:42:50Z](https://github.com/lucianotonet/sistep_admin/commits/05949771c50b38f00fc88583dc5d7e021643b51c)_
-### Merge branch 'main' of github.com:lucianotonet/sistep_admin
-
-
-_[2024-09-10T23:42:44Z](https://github.com/lucianotonet/sistep_admin/commits/9415c0dd707de81baa0640f8c21eaad8d0f469eb)_
-### feat: Update changelog workflow conditions
-
-- Adjusted the conditional check for creating a pull request to prevent unnecessary updates during pull_request events. This ensures that the changelog is only updated when changes occur outside of ongoing pull requests, streamlining the workflow and reducing clutter in the repository.
-
-- By implementing this change, we improve the efficiency of the changelog management process and enhance clarity in our pull request activities.
-
-
-_[2024-09-10T23:40:49Z](https://github.com/lucianotonet/sistep_admin/commits/9227290ea67502701879986567acab6c50af74b9)_
-### Merge pull request #8 from lucianotonet/changelog-update
-
-Atualização do Changelog
-
-
-_[2024-09-10T23:39:51Z](https://github.com/lucianotonet/sistep_admin/commits/cd49caae575cfdd64d53489c15ef06f2d8b54d2e)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:39:37Z](https://github.com/lucianotonet/sistep_admin/commits/04191e49e7555e897844d240fb066ffac11f031f)_
-### Merge pull request #7 from lucianotonet/changelog-update
-
-Atualização do Changelog
 
 
