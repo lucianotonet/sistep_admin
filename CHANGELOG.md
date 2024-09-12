@@ -1,4 +1,24 @@
 # Changelog
+_[2024-09-12T23:29:09Z](https://github.com/lucianotonet/sistep_admin/commits/f618c40af0447d0bde01d57b9e6ba2c42b340d50)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:29:02Z](https://github.com/lucianotonet/sistep_admin/commits/fffcf5ecaa859cce5b7bd2f30f78d26cea35fd73)_
+### feat(auth, profile): enhance registration and profile update functionality for user types
+
+- Updated registration tests to allow for user type selection (student and psychologist), ensuring that each type can provide relevant information during registration. This improvement supports a more versatile user onboarding process.
+
+- Modified profile update tests to reflect both student and psychologist contexts, verifying that users can update their details appropriately based on their role. This aligns with the application’s requirement to handle different user types distinctly.
+
+- Overall, these changes improve the robustness of user authentication and profile management by accommodating varying user types, ultimately enhancing user experience and promoting accurate data handling.
+
+WIP: Additional validations and edge cases could be explored in future updates.
+
+
+_[2024-09-12T23:23:41Z](https://github.com/lucianotonet/sistep_admin/commits/f3eec79527b53c65a3083b58c3ea4161a8e3a0c2)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
 _[2024-09-12T23:23:41Z](https://github.com/lucianotonet/sistep_admin/commits/16813a23e6a7b9678121185f731722f18c9523ef)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -190,21 +210,5 @@ _[2024-09-10T23:42:44Z](https://github.com/lucianotonet/sistep_admin/commits/941
 - Adjusted the conditional check for creating a pull request to prevent unnecessary updates during pull_request events. This ensures that the changelog is only updated when changes occur outside of ongoing pull requests, streamlining the workflow and reducing clutter in the repository.
 
 - By implementing this change, we improve the efficiency of the changelog management process and enhance clarity in our pull request activities.
-
-
-_[2024-09-10T23:40:49Z](https://github.com/lucianotonet/sistep_admin/commits/9227290ea67502701879986567acab6c50af74b9)_
-### Merge pull request #8 from lucianotonet/changelog-update
-
-Atualização do Changelog
-
-
-_[2024-09-10T23:39:51Z](https://github.com/lucianotonet/sistep_admin/commits/cd49caae575cfdd64d53489c15ef06f2d8b54d2e)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:39:37Z](https://github.com/lucianotonet/sistep_admin/commits/04191e49e7555e897844d240fb066ffac11f031f)_
-### Merge pull request #7 from lucianotonet/changelog-update
-
-Atualização do Changelog
 
 
