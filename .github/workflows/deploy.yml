@@ -27,6 +27,11 @@ jobs:
     - name: Install PHP dependencies
       run: composer install --prefer-dist --no-interaction --no-progress --no-suggest
 
+    - name: Install Yarn dependencies and build assets
+      run: |
+        yarn install
+        npx vite build
+
     - name: Run Laravel tests
       run: |
         cp .env.example .env
@@ -34,11 +39,6 @@ jobs:
         echo "DB_CONNECTION=sqlite" >> .env
         echo "DB_DATABASE=:memory:" >> .env
         php artisan test
-
-    - name: Install Yarn dependencies and build assets
-      run: |
-        yarn install
-        npx vite build
 
     - name: Install sshpass
       run: sudo apt-get install -y sshpass
