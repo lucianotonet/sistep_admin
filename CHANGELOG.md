@@ -1,4 +1,46 @@
 # Changelog
+_[2024-09-12T23:22:39Z](https://github.com/lucianotonet/sistep_admin/commits/8595d85722e71c3d8f4b6d09b9037ae935596d14)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:22:33Z](https://github.com/lucianotonet/sistep_admin/commits/883909a967cd59636cc3cb662bcb63bb523c6662)_
+### feat(deploy): downgrade PHP setup action version
+
+- Altered the PHP setup action from version 4 to version 3 to maintain compatibility with current workflow requirements.
+
+- This change helps prevent potential issues arising from the newer version, ensuring a stable deployment process and minimizing disruptions in the CI/CD pipeline.
+
+
+_[2024-09-12T23:21:15Z](https://github.com/lucianotonet/sistep_admin/commits/75d65da13ca692a61d73c132c7177c21cee72d4a)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:21:15Z](https://github.com/lucianotonet/sistep_admin/commits/ee74c29a54ce5ac25407c4c9c81b3f22f6555c21)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:21:09Z](https://github.com/lucianotonet/sistep_admin/commits/1267d9215b5436cfd93667ad26b0afeeee0bffa0)_
+### feat: add GitHub Actions workflow for Laravel app deployment
+
+- Implement a deployment workflow that automates the process of deploying the Laravel application to the server upon push to the main branch. This enhances the CI/CD pipeline, ensuring more consistent and reliable deployments.
+
+- The workflow includes steps to set up Node.js and PHP environments, install dependencies, run tests, build assets, and securely transfer files to the server. This helps in minimizing manual errors and streamlining the deployment process.
+
+- Leveraging sshpass for secure password-based authentication improves the automation experience, allowing for unattended deployments while maintaining security.
+
+- Further considerations include ensuring that secrets for SSH access are correctly configured and that the server environment is set up to accept incoming deployments.
+
+
+_[2024-09-11T03:48:05Z](https://github.com/lucianotonet/sistep_admin/commits/de6010a8cc8b7e63358afe6cbc0993f59b019088)_
+### WIP: Adiciona novos recursos e melhorias
+
+- Inclui a dependência de tipografia do Tailwind para melhorar o estilo do texto e a consistência visual em toda a aplicação.
+- Adiciona uma nova rota e visualização para o changelog, permitindo que os usuários acessem facilmente as atualizações e mudanças na documentação.
+- Atualiza o rodapé da aplicação para incluir um link para o changelog, facilitando o acesso e a transparência para os usuários sobre o histórico de alterações.
+
+Essas mudanças visam aprimorar a usabilidade e a apresentação do conteúdo, proporcionando uma melhor experiência ao usuário e mantendo a aplicação informada sobre suas atualizações.
+
+
 _[2024-09-11T03:48:05Z](https://github.com/lucianotonet/sistep_admin/commits/787e14f8c22e39e897faf38aa7a9f0c13b253897)_
 ### WIP: Adiciona novos recursos e melhorias
 
@@ -165,46 +207,5 @@ _[2024-09-10T23:37:01Z](https://github.com/lucianotonet/sistep_admin/commits/562
 - O processo de atualização do changelog agora inclui uma mensagem de sucesso, simplificando o feedback ao usuário após a execução. A remoção do arquivo CHANGELOG.md da pasta pública reduz a confusão sobre onde encontrar o changelog atualizado, centralizando a informação apenas em um local.
 
 Essas melhorias visam aprimorar a experiência do desenvolvedor e a transparência no controle de versões, ao mesmo tempo que simplificam a estrutura de arquivos do projeto.
-
-
-_[2024-09-10T23:23:26Z](https://github.com/lucianotonet/sistep_admin/commits/bfa5eef208abdbac9a048542c406ae3816d2609e)_
-### Merge pull request #5 from lucianotonet/changelog-update
-
-Atualização do Changelog
-
-
-_[2024-09-10T23:18:29Z](https://github.com/lucianotonet/sistep_admin/commits/c5c158543c7d7bf83d4ae693731e3b6b940b9760)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:18:06Z](https://github.com/lucianotonet/sistep_admin/commits/2ddfdc0917a3bf03b43c1b7b7ea3be7389a0ee54)_
-### chore: update changelog workflow configuration
-
-- Set fetch depth to 0 in the checkout step to ensure the full repository history is available, facilitating better changelog generation and visibility into changes.
-- Upgrade to version 4 of the create-pull-request action for enhanced features and bug fixes.
-- Change the base branch for the pull request to 'main', aligning with repository standards for smoother integration.
-- Explicitly grant permissions for pull requests, reinforcing workflow security and ensuring the action can create pull requests as intended.
-
-These improvements streamline the changelog update process and enhance maintainability.
-
-
-_[2024-09-10T23:15:35Z](https://github.com/lucianotonet/sistep_admin/commits/bfd9465a9e5f99f0016ab243e7a436774729a769)_
-### Trying to fix: "Error: Resource not accessible by integration"
-
-
-_[2024-09-10T23:12:16Z](https://github.com/lucianotonet/sistep_admin/commits/afdc533fa73294622686112441dd3af95d007b06)_
-### feat: enhance Alert component with customizable types
-
-- Added a type prop to the Alert component to support different alert styles (success, warning, error, info).
-- Improved the styling dynamically according to the alert type, enhancing user experience and clarity in notifications.
-- Updated usage in the dashboard view to demonstrate the success type, making alerts more visually appealing and meaningful.
-
-This change addresses the need for a more flexible alert system, allowing developers to easily indicate the nature of messages displayed to users.
-
-
-_[2024-09-10T22:59:58Z](https://github.com/lucianotonet/sistep_admin/commits/1173dc1b911489324337e55c47767bb64a21f223)_
-### Aprimora permissões de workflow para o changelog
-
-Atualiza as permissões do workflow para permitir que o changelog seja escrito diretamente no repositório, melhorando a automação do processo de atualização. Essa mudança visa facilitar a manutenção do changelog e garantir que as atualizações sejam acionadas de forma mais eficiente.
 
 
