@@ -1,4 +1,29 @@
 # Changelog
+_[2024-09-12T23:46:06Z](https://github.com/lucianotonet/sistep_admin/commits/05562390269380df8c3b69e1b6e88ea766286ba3)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:45:59Z](https://github.com/lucianotonet/sistep_admin/commits/8f6e8da6ca4ed22d2938546e927794914e5090e2)_
+### refactor: simplify SSH setup for deployment
+
+- Replaced sshpass usage with SSH key authentication to enhance security and eliminate the need for plaintext passwords in the workflow.
+- Improved the SSH setup process by directly configuring the private key and managing the SSH agent, leading to cleaner and more manageable code.
+
+This approach mitigates risks associated with storing sensitive information and aligns with best practices for secure deployment processes.
+
+
+_[2024-09-12T23:33:39Z](https://github.com/lucianotonet/sistep_admin/commits/1d4925ddb93d51b2a68d1d1d7913b1f3a9ac5975)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:33:39Z](https://github.com/lucianotonet/sistep_admin/commits/e4c2b0cfb6f6d56e7c9fe5b4ceec41def6688083)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:31:29Z](https://github.com/lucianotonet/sistep_admin/commits/69474e2269e5d50af03c469ab91c885f0c6a6dbd)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
 _[2024-09-12T23:31:29Z](https://github.com/lucianotonet/sistep_admin/commits/f243a401829bc3d2109b25a4af1680ffadad79af)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -182,31 +207,5 @@ _[2024-09-10T23:56:15Z](https://github.com/lucianotonet/sistep_admin/commits/949
 ### Merge pull request #11 from lucianotonet/create-pull-request/patch
 
 Atualização do Changelog
-
-
-_[2024-09-10T23:56:04Z](https://github.com/lucianotonet/sistep_admin/commits/84b9eb3c73b54b8c064cb3295f54ec801b4abfae)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:55:54Z](https://github.com/lucianotonet/sistep_admin/commits/fdab689a2dc6d790b1aead4fb0bf0a121ac6b95d)_
-### Merge pull request #10 from lucianotonet/create-pull-request/patch
-
-Atualização do Changelog
-
-
-_[2024-09-10T23:54:15Z](https://github.com/lucianotonet/sistep_admin/commits/0b8cbe8ec54390b4c9e014b3cbe7d41c6a9d30dc)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:54:02Z](https://github.com/lucianotonet/sistep_admin/commits/9410c763c30b68d1c850643c876c50179908e1bd)_
-### Update changelog-update.yml
-
-
-_[2024-09-10T23:47:17Z](https://github.com/lucianotonet/sistep_admin/commits/e837534986eca7c41bf75f936f1cfdcdb596d7aa)_
-### feat(changelog): improve pull request handling for changelog updates
-
-- Renamed the step to reflect that it can now either create or update a pull request, enhancing clarity in the workflow.
-- Removed unnecessary options for handling existing pull requests, streamlining the process and reducing potential confusion.
-- This change ensures that updates to the changelog are managed more effectively, improving automation and maintaining consistency in project documentation.
 
 
