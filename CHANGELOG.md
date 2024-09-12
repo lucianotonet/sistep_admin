@@ -1,4 +1,63 @@
 # Changelog
+_[2024-09-12T23:21:15Z](https://github.com/lucianotonet/sistep_admin/commits/ee74c29a54ce5ac25407c4c9c81b3f22f6555c21)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:21:09Z](https://github.com/lucianotonet/sistep_admin/commits/1267d9215b5436cfd93667ad26b0afeeee0bffa0)_
+### feat: add GitHub Actions workflow for Laravel app deployment
+
+- Implement a deployment workflow that automates the process of deploying the Laravel application to the server upon push to the main branch. This enhances the CI/CD pipeline, ensuring more consistent and reliable deployments.
+
+- The workflow includes steps to set up Node.js and PHP environments, install dependencies, run tests, build assets, and securely transfer files to the server. This helps in minimizing manual errors and streamlining the deployment process.
+
+- Leveraging sshpass for secure password-based authentication improves the automation experience, allowing for unattended deployments while maintaining security.
+
+- Further considerations include ensuring that secrets for SSH access are correctly configured and that the server environment is set up to accept incoming deployments.
+
+
+_[2024-09-11T03:48:05Z](https://github.com/lucianotonet/sistep_admin/commits/de6010a8cc8b7e63358afe6cbc0993f59b019088)_
+### WIP: Adiciona novos recursos e melhorias
+
+- Inclui a dependência de tipografia do Tailwind para melhorar o estilo do texto e a consistência visual em toda a aplicação.
+- Adiciona uma nova rota e visualização para o changelog, permitindo que os usuários acessem facilmente as atualizações e mudanças na documentação.
+- Atualiza o rodapé da aplicação para incluir um link para o changelog, facilitando o acesso e a transparência para os usuários sobre o histórico de alterações.
+
+Essas mudanças visam aprimorar a usabilidade e a apresentação do conteúdo, proporcionando uma melhor experiência ao usuário e mantendo a aplicação informada sobre suas atualizações.
+
+
+_[2024-09-11T03:48:05Z](https://github.com/lucianotonet/sistep_admin/commits/787e14f8c22e39e897faf38aa7a9f0c13b253897)_
+### WIP: Adiciona novos recursos e melhorias
+
+- Inclui a dependência de tipografia do Tailwind para melhorar o estilo do texto e a consistência visual em toda a aplicação.
+- Adiciona uma nova rota e visualização para o changelog, permitindo que os usuários acessem facilmente as atualizações e mudanças na documentação.
+- Atualiza o rodapé da aplicação para incluir um link para o changelog, facilitando o acesso e a transparência para os usuários sobre o histórico de alterações.
+
+Essas mudanças visam aprimorar a usabilidade e a apresentação do conteúdo, proporcionando uma melhor experiência ao usuário e mantendo a aplicação informada sobre suas atualizações.
+
+
+_[2024-09-11T00:20:41Z](https://github.com/lucianotonet/sistep_admin/commits/3a78830f375f8c280f5e20ac4eb80444e519bac1)_
+### Merge remote-tracking branch 'origin/main'
+
+
+_[2024-09-11T00:17:04Z](https://github.com/lucianotonet/sistep_admin/commits/bd2bd2b7e324912fac84273656998977c0186125)_
+### feat(todos): update changelog and enhance test index
+
+- Adicionado link atualizado no changelog para refletir as últimas alterações de commit.
+- Marcado o item de CRUD para Testes como concluído no documento de tarefas.
+
+  O status atualizado fornece clareza sobre o progresso e permite gerenciamento eficaz das etapas restantes do projeto.
+
+- Estrutura de planejamento ampliada, detalhando as próximas ações em desenvolvimento, incluindo gerenciamento de pacientes e conformidade com a LGPD.
+
+  Esse planejamento aprimorado serve para orientar o foco da equipe em tarefas críticas e garantir a implementação de requisitos legais.
+
+- Adicionada uma mensagem de sucesso na visualização dos testes, melhorando a experiência do usuário ao confirmar operações realizadas com sucesso.
+
+Essa atualização visa melhorar a comunicação do progresso do projeto, a usabilidade e a conformidade com regulamentações necessárias.
+
+WIP: as implementações futuras para análise de resultados e finalização do fluxo são necessárias para concluir o projeto.
+
+
 _[2024-09-11T00:17:04Z](https://github.com/lucianotonet/sistep_admin/commits/48c25ccd0dbf70f443dc55fd1db393523536618a)_
 ### feat(todos): update changelog and enhance test index
 
@@ -153,41 +212,5 @@ _[2024-09-10T23:18:06Z](https://github.com/lucianotonet/sistep_admin/commits/2dd
 - Explicitly grant permissions for pull requests, reinforcing workflow security and ensuring the action can create pull requests as intended.
 
 These improvements streamline the changelog update process and enhance maintainability.
-
-
-_[2024-09-10T23:15:35Z](https://github.com/lucianotonet/sistep_admin/commits/bfd9465a9e5f99f0016ab243e7a436774729a769)_
-### Trying to fix: "Error: Resource not accessible by integration"
-
-
-_[2024-09-10T23:12:16Z](https://github.com/lucianotonet/sistep_admin/commits/afdc533fa73294622686112441dd3af95d007b06)_
-### feat: enhance Alert component with customizable types
-
-- Added a type prop to the Alert component to support different alert styles (success, warning, error, info).
-- Improved the styling dynamically according to the alert type, enhancing user experience and clarity in notifications.
-- Updated usage in the dashboard view to demonstrate the success type, making alerts more visually appealing and meaningful.
-
-This change addresses the need for a more flexible alert system, allowing developers to easily indicate the nature of messages displayed to users.
-
-
-_[2024-09-10T22:59:58Z](https://github.com/lucianotonet/sistep_admin/commits/1173dc1b911489324337e55c47767bb64a21f223)_
-### Aprimora permissões de workflow para o changelog
-
-Atualiza as permissões do workflow para permitir que o changelog seja escrito diretamente no repositório, melhorando a automação do processo de atualização. Essa mudança visa facilitar a manutenção do changelog e garantir que as atualizações sejam acionadas de forma mais eficiente.
-
-
-_[2024-09-10T22:57:32Z](https://github.com/lucianotonet/sistep_admin/commits/e065e3c21e5fe66b0ba1e9d7348b60d8765b05dc)_
-### Fix: "Warning: Unexpected input(s) 'head'"
-
-
-_[2024-09-10T22:55:05Z](https://github.com/lucianotonet/sistep_admin/commits/1c4d4cdf53a3f4a5cdb3ac621b1279d60f3e47c5)_
-### Atualiza workflow para geração automática de changelog
-
-Adiciona um workflow que gera automaticamente o changelog ao fazer push na branch principal. Isso garante que as atualizações de changelog sejam sempre capturadas e que os desenvolvedores sejam notificados sobre alterações, melhorando a rastreabilidade das mudanças e a comunicação entre os membros da equipe.
-
-
-_[2024-09-10T22:50:55Z](https://github.com/lucianotonet/sistep_admin/commits/32ef3f5e6eda3a4428b18215c43e51c2084b65c9)_
-### Adiciona changelog e script para geração automática
-
-Inclui um novo arquivo de changelog para documentar as alterações no projeto de forma clara e acessível. Com a adição do script de geração automática, é possível atualizar facilmente o changelog com base nos commits do GitHub, garantindo que as informações relevantes estejam sempre disponíveis. Essas melhorias visam facilitar a comunicação de mudanças entre a equipe e usuários, além de manter a documentação mais organizada e atualizada.
 
 
