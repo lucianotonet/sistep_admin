@@ -1,4 +1,12 @@
 # Changelog
+_[2024-09-12T23:33:39Z](https://github.com/lucianotonet/sistep_admin/commits/e4c2b0cfb6f6d56e7c9fe5b4ceec41def6688083)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:31:29Z](https://github.com/lucianotonet/sistep_admin/commits/69474e2269e5d50af03c469ab91c885f0c6a6dbd)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
 _[2024-09-12T23:31:29Z](https://github.com/lucianotonet/sistep_admin/commits/f243a401829bc3d2109b25a4af1680ffadad79af)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -196,17 +204,5 @@ Atualização do Changelog
 
 _[2024-09-10T23:54:15Z](https://github.com/lucianotonet/sistep_admin/commits/0b8cbe8ec54390b4c9e014b3cbe7d41c6a9d30dc)_
 ### [create-pull-request] automated change
-
-
-_[2024-09-10T23:54:02Z](https://github.com/lucianotonet/sistep_admin/commits/9410c763c30b68d1c850643c876c50179908e1bd)_
-### Update changelog-update.yml
-
-
-_[2024-09-10T23:47:17Z](https://github.com/lucianotonet/sistep_admin/commits/e837534986eca7c41bf75f936f1cfdcdb596d7aa)_
-### feat(changelog): improve pull request handling for changelog updates
-
-- Renamed the step to reflect that it can now either create or update a pull request, enhancing clarity in the workflow.
-- Removed unnecessary options for handling existing pull requests, streamlining the process and reducing potential confusion.
-- This change ensures that updates to the changelog are managed more effectively, improving automation and maintaining consistency in project documentation.
 
 
