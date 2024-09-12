@@ -1,4 +1,30 @@
 # Changelog
+_[2024-09-12T23:33:39Z](https://github.com/lucianotonet/sistep_admin/commits/e4c2b0cfb6f6d56e7c9fe5b4ceec41def6688083)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:31:29Z](https://github.com/lucianotonet/sistep_admin/commits/69474e2269e5d50af03c469ab91c885f0c6a6dbd)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:31:29Z](https://github.com/lucianotonet/sistep_admin/commits/f243a401829bc3d2109b25a4af1680ffadad79af)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:31:23Z](https://github.com/lucianotonet/sistep_admin/commits/743946787215a69e8317a9f79e3689d9378ed825)_
+### WIP: Reorganize deployment workflow to optimize asset building
+
+- Moved the installation and building of Yarn dependencies earlier in the deployment process. This ensures that assets are built before running Laravel tests, leading to a more efficient workflow and reducing potential errors related to missing assets during testing.
+
+- Removed duplicated Yarn installation and build steps to streamline the process, improving clarity and maintainability of the deployment configuration.
+
+These changes aim to optimize the deployment pipeline, making it more robust and efficient.
+
+
+_[2024-09-12T23:29:09Z](https://github.com/lucianotonet/sistep_admin/commits/3c11e0bfd32451065903753dd4af40ef8a9093ce)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
 _[2024-09-12T23:29:09Z](https://github.com/lucianotonet/sistep_admin/commits/f618c40af0447d0bde01d57b9e6ba2c42b340d50)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -178,37 +204,5 @@ Atualização do Changelog
 
 _[2024-09-10T23:54:15Z](https://github.com/lucianotonet/sistep_admin/commits/0b8cbe8ec54390b4c9e014b3cbe7d41c6a9d30dc)_
 ### [create-pull-request] automated change
-
-
-_[2024-09-10T23:54:02Z](https://github.com/lucianotonet/sistep_admin/commits/9410c763c30b68d1c850643c876c50179908e1bd)_
-### Update changelog-update.yml
-
-
-_[2024-09-10T23:47:17Z](https://github.com/lucianotonet/sistep_admin/commits/e837534986eca7c41bf75f936f1cfdcdb596d7aa)_
-### feat(changelog): improve pull request handling for changelog updates
-
-- Renamed the step to reflect that it can now either create or update a pull request, enhancing clarity in the workflow.
-- Removed unnecessary options for handling existing pull requests, streamlining the process and reducing potential confusion.
-- This change ensures that updates to the changelog are managed more effectively, improving automation and maintaining consistency in project documentation.
-
-
-_[2024-09-10T23:44:21Z](https://github.com/lucianotonet/sistep_admin/commits/a2a22288f409aa82bfe403d2cf2877f984ad2861)_
-### WIP: Add handling for existing pull requests in changelog update workflow
-
-- Implemented updates to the changelog update workflow
-- Added functionality to handle existing pull requests, allowing for automatic updates without conflicts
-- Enhanced the fetch capability to ensure the latest changes are always considered during the update process, promoting better synchronization and reducing manual intervention
-
-
-_[2024-09-10T23:42:50Z](https://github.com/lucianotonet/sistep_admin/commits/05949771c50b38f00fc88583dc5d7e021643b51c)_
-### Merge branch 'main' of github.com:lucianotonet/sistep_admin
-
-
-_[2024-09-10T23:42:44Z](https://github.com/lucianotonet/sistep_admin/commits/9415c0dd707de81baa0640f8c21eaad8d0f469eb)_
-### feat: Update changelog workflow conditions
-
-- Adjusted the conditional check for creating a pull request to prevent unnecessary updates during pull_request events. This ensures that the changelog is only updated when changes occur outside of ongoing pull requests, streamlining the workflow and reducing clutter in the repository.
-
-- By implementing this change, we improve the efficiency of the changelog management process and enhance clarity in our pull request activities.
 
 
