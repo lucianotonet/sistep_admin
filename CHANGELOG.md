@@ -1,4 +1,41 @@
 # Changelog
+_[2024-09-12T23:29:09Z](https://github.com/lucianotonet/sistep_admin/commits/f618c40af0447d0bde01d57b9e6ba2c42b340d50)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:29:02Z](https://github.com/lucianotonet/sistep_admin/commits/fffcf5ecaa859cce5b7bd2f30f78d26cea35fd73)_
+### feat(auth, profile): enhance registration and profile update functionality for user types
+
+- Updated registration tests to allow for user type selection (student and psychologist), ensuring that each type can provide relevant information during registration. This improvement supports a more versatile user onboarding process.
+
+- Modified profile update tests to reflect both student and psychologist contexts, verifying that users can update their details appropriately based on their role. This aligns with the application’s requirement to handle different user types distinctly.
+
+- Overall, these changes improve the robustness of user authentication and profile management by accommodating varying user types, ultimately enhancing user experience and promoting accurate data handling.
+
+WIP: Additional validations and edge cases could be explored in future updates.
+
+
+_[2024-09-12T23:23:41Z](https://github.com/lucianotonet/sistep_admin/commits/f3eec79527b53c65a3083b58c3ea4161a8e3a0c2)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:23:41Z](https://github.com/lucianotonet/sistep_admin/commits/16813a23e6a7b9678121185f731722f18c9523ef)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
+_[2024-09-12T23:23:34Z](https://github.com/lucianotonet/sistep_admin/commits/e9b37bad51468d57e7e68af5dec320a54f83548a)_
+### feat: downgrade PHP setup action to improve stability
+
+- Replaced the setup-php GitHub Action from version 3 to version 2.
+- This change mitigates potential compatibility issues with existing workflows, ensuring a smoother deployment process with PHP 8.2.
+
+Consider monitoring the effects post-deployment to identify any further enhancements needed for the PHP environment.
+
+
+_[2024-09-12T23:22:39Z](https://github.com/lucianotonet/sistep_admin/commits/d894c280fff52217326e7b1d20752b8670ef97e7)_
+### Merge branch 'main' of github.com:lucianotonet/sistep_admin
+
+
 _[2024-09-12T23:22:39Z](https://github.com/lucianotonet/sistep_admin/commits/8595d85722e71c3d8f4b6d09b9037ae935596d14)_
 ### Merge branch 'main' of github.com:lucianotonet/sistep_admin
 
@@ -173,39 +210,5 @@ _[2024-09-10T23:42:44Z](https://github.com/lucianotonet/sistep_admin/commits/941
 - Adjusted the conditional check for creating a pull request to prevent unnecessary updates during pull_request events. This ensures that the changelog is only updated when changes occur outside of ongoing pull requests, streamlining the workflow and reducing clutter in the repository.
 
 - By implementing this change, we improve the efficiency of the changelog management process and enhance clarity in our pull request activities.
-
-
-_[2024-09-10T23:40:49Z](https://github.com/lucianotonet/sistep_admin/commits/9227290ea67502701879986567acab6c50af74b9)_
-### Merge pull request #8 from lucianotonet/changelog-update
-
-Atualização do Changelog
-
-
-_[2024-09-10T23:39:51Z](https://github.com/lucianotonet/sistep_admin/commits/cd49caae575cfdd64d53489c15ef06f2d8b54d2e)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:39:37Z](https://github.com/lucianotonet/sistep_admin/commits/04191e49e7555e897844d240fb066ffac11f031f)_
-### Merge pull request #7 from lucianotonet/changelog-update
-
-Atualização do Changelog
-
-
-_[2024-09-10T23:38:04Z](https://github.com/lucianotonet/sistep_admin/commits/9853de017eb8dd4b4a29069e7a4ca2bfcdb3522b)_
-### [create-pull-request] automated change
-
-
-_[2024-09-10T23:37:40Z](https://github.com/lucianotonet/sistep_admin/commits/b41403e4e5e42e17f5fe11fc947a1ff7e80c725a)_
-### Merge branch 'main' of github.com:lucianotonet/sistep_admin
-
-
-_[2024-09-10T23:37:01Z](https://github.com/lucianotonet/sistep_admin/commits/5625f7de3f0e6d5c31b7e33772487c777f50a3b6)_
-### feat: Atualizar fluxo de geração de changelog e remover arquivo público desnecessário
-
-- Introduzida uma condição para evitar que o bot do GitHub atualize o changelog, garantindo que apenas ações explícitas de desenvolvedores sejam registradas. Isso melhora a clareza e a relevância das alterações documentadas, evitando entradas automáticas que podem não refletir mudanças reais no código.
-
-- O processo de atualização do changelog agora inclui uma mensagem de sucesso, simplificando o feedback ao usuário após a execução. A remoção do arquivo CHANGELOG.md da pasta pública reduz a confusão sobre onde encontrar o changelog atualizado, centralizando a informação apenas em um local.
-
-Essas melhorias visam aprimorar a experiência do desenvolvedor e a transparência no controle de versões, ao mesmo tempo que simplificam a estrutura de arquivos do projeto.
 
 
