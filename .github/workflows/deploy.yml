@@ -40,12 +40,15 @@ jobs:
         echo "DB_DATABASE=:memory:" >> .env
         php artisan test
 
-    - name: Install sshpass
-      run: sudo apt-get install -y sshpass
+    - name: Setup SSH
+      run: |
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+        chmod 600 private_key
+        eval "$(ssh-agent -s)"
+        ssh-add private_key
 
     - name: Upload assets to server
       run: |
-        sshpass -p ${{ secrets.SSH_PASSWORD }} \
         scp -v -P 2222 \
         -o StrictHostKeyChecking=no \
         -r /home/runner/work/sistep-admin/sistep-admin/public/build \
@@ -53,7 +56,6 @@ jobs:
 
     - name: Deploy Laravel App
       run: |
-        sshpass -p ${{ secrets.SSH_PASSWORD }} \
         ssh -v -p 2222 \
         -o StrictHostKeyChecking=no \
         ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home2/${{ secrets.SSH_USER }}/_SISTEP/ && \
