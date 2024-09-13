@@ -10,16 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Setup SSH
+    - name: Testar conexão SSH
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
-        cat ~/.ssh/id_ed25519 | cut -c1-10
         eval "$(ssh-agent -s)"
         ssh-add ~/.ssh/id_ed25519
-
-    - name: Testar conexão SSH
-      run: |
+      
         ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -v -p 2222 \
         ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo 'Conexão SSH bem-sucedida!'"
