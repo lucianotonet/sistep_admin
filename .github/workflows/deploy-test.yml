@@ -18,5 +18,5 @@ jobs:
         eval "$(ssh-agent -s)"
         ssh-add ~/.ssh/id_ed25519
       
-        ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -v -p 2222 \
+        ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o LogLevel=ERROR -o PreferredAuthentications=publickey -p 2222 \
         ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo 'Conexão SSH bem-sucedida!'"
