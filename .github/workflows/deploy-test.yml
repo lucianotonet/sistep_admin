@@ -20,12 +20,12 @@ jobs:
 
     - name: Testar conexão SSH
       run: |
-        ssh -o StrictHostKeyChecking=no -v -p 2222 \
+        ssh -i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -v -p 2222 \
         ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo 'Conexão SSH bem-sucedida!'"
 
     - name: Enviar arquivo de exemplo
       run: |
         echo "Este é um arquivo de exemplo." > exemplo.txt
-        scp -v -P 2222 \
+        scp -i ~/.ssh/id_rsa -o IdentitiesOnly=yes -v -P 2222 \
         -o StrictHostKeyChecking=no \
         exemplo.txt ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home2/${{ secrets.SSH_USER }}/
