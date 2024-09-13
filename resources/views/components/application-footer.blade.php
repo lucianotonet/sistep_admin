@@ -1,32 +1,36 @@
-<footer class="py-4 mt-8 w-full">
-    <div class="flex flex-col md:flex-row px-4 text-muted">
-        <div class="flex flex-col w-full text-left md:w-1/2">
+<footer class="mt-8 w-full py-4">
+    <div class="flex flex-col px-4 text-muted md:flex-row">
+        <div class="flex w-full flex-col text-left md:w-1/2">
             <p class="text-sm">
-                &copy; {{ date('Y') }} SISTEP. Todos os direitos reservados.
+                &copy; {{ date("Y") }} SISTEP. Todos os direitos reservados.
             </p>
             <p class="text-xs leading-none">
-                Este site está em conformidade com a Lei Geral de Proteção de Dados (LGPD). <br />
-                Utilizamos cookies para melhorar sua experiência de navegação. <br />
-                Ao continuar utilizando nosso site, você concorda com nossa política de cookies e privacidade.
+                Este site está em conformidade com a Lei Geral de Proteção de
+                Dados (LGPD).
+                <br />
+                Utilizamos cookies para melhorar sua experiência de navegação.
+                <br />
+                Ao continuar utilizando nosso site, você concorda com nossa
+                política de cookies e privacidade.
             </p>
         </div>
-        <div class="flex flex-col w-full text-left md:flex-row mt-1 md:mt-0 md:w-1/2">
+        <div
+            class="mt-1 flex w-full flex-col text-left md:mt-0 md:w-1/2 md:flex-row"
+        >
             <div
-                class="flex flex-col flex-grow text-xs md:text-sm md:items-end xl:flex-row md:justify-end gap-0 xl:gap-6 min-h-full">
-                <a href="{{ route('changelog') }}" class="">
-                    Changelog
-                </a>
-                <a href="{{ route('tcle') }}" class="">
+                class="flex min-h-full flex-grow flex-col gap-0 text-xs md:items-end md:justify-end md:text-sm xl:flex-row xl:gap-6"
+            >
+                <a href="{{ route("changelog") }}" class="">Changelog</a>
+                <a href="{{ route("tcle") }}" class="">
                     Termo de Consentimento Livre e Esclarecido
                 </a>
-                <a href="{{ route('privacy') }}" class="">
+                <a href="{{ route("privacy") }}" class="">
                     Política de Privacidade
                 </a>
-                <a href="{{ route('cookies') }}" class="">
+                <a href="{{ route("cookies") }}" class="">
                     Política de Cookies
                 </a>
             </div>
         </div>
     </div>
-
 </footer>

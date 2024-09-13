@@ -1,1 +1,1 @@
-<header class="">@include('layouts.navigation')</header>
+<header class="">@include("layouts.navigation")</header>

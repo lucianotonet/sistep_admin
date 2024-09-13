@@ -8,58 +8,58 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v4
-      with:
-        node-version: '22'
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
 
-    - name: Setup PHP environment
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.2'
-        coverage: none
+      - name: Setup PHP environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          coverage: none
 
-    - name: Install PHP dependencies
-      run: composer install --prefer-dist --no-interaction --no-progress --no-suggest
+      - name: Install PHP dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress --no-suggest
 
-    - name: Install Yarn dependencies and build assets
-      run: |
-        yarn install
-        npx vite build
+      - name: Install Yarn dependencies and build assets
+        run: |
+          yarn install
+          npx vite build
 
-    - name: Run Laravel tests
-      run: |
-        cp .env.example .env
-        php artisan key:generate
-        echo "DB_CONNECTION=sqlite" >> .env
-        echo "DB_DATABASE=:memory:" >> .env
-        php artisan test
+      - name: Run Laravel tests
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          echo "DB_CONNECTION=sqlite" >> .env
+          echo "DB_DATABASE=:memory:" >> .env
+          php artisan test
 
-    - name: Setup SSH
-      run: |
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
-        chmod 600 private_key
-        eval "$(ssh-agent -s)"
-        ssh-add private_key
+      - name: Setup SSH
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
+          chmod 600 private_key
+          eval "$(ssh-agent -s)"
+          ssh-add private_key
 
-    - name: Upload assets to server
-      run: |
-        scp -v -P 2222 \
-        -o StrictHostKeyChecking=no \
-        -r /home/runner/work/sistep-admin/sistep-admin/public/build \
-        ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home2/${{ secrets.SSH_USER }}/_SISTEP/public
+      - name: Upload assets to server
+        run: |
+          scp -v -P 2222 \
+          -o StrictHostKeyChecking=no \
+          -r /home/runner/work/sistep-admin/sistep-admin/public/build \
+          ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home2/${{ secrets.SSH_USER }}/_SISTEP/public
 
-    - name: Deploy Laravel App
-      run: |
-        ssh -v -p 2222 \
-        -o StrictHostKeyChecking=no \
-        ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home2/${{ secrets.SSH_USER }}/_SISTEP/ && \
-        git fetch && \
-        git reset --hard origin/main && \
-        /opt/cpanel/composer/bin/composer install --no-dev && \
-        /opt/cpanel/composer/bin/composer dump-auto && \
-        php artisan optimize:clear && \
-        php artisan migrate --force"
+      - name: Deploy Laravel App
+        run: |
+          ssh -v -p 2222 \
+          -o StrictHostKeyChecking=no \
+          ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home2/${{ secrets.SSH_USER }}/_SISTEP/ && \
+          git fetch && \
+          git reset --hard origin/main && \
+          /opt/cpanel/composer/bin/composer install --no-dev && \
+          /opt/cpanel/composer/bin/composer dump-auto && \
+          php artisan optimize:clear && \
+          php artisan migrate --force"
