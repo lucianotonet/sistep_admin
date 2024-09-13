@@ -28,9 +28,14 @@
                     <a href="/cookies" class="">
                         Política de Cookies
                     </a>
+                    <ThemeToggle />
                 </div>
             </div>
         </div>
     </footer>
 </template>
+
+<script setup>
+import ThemeToggle from './ThemeToggle.vue';
+</script>
 

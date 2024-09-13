@@ -6,9 +6,9 @@ import { RocketIcon } from "@radix-icons/vue";
 <template>
     <Alert>
         <RocketIcon class="h-4 w-4" />
-        <AlertTitle>Heads up!</AlertTitle>
+        <AlertTitle>Bem-vindo ao SISTEP!</AlertTitle>
         <AlertDescription>
-            You can add components to your app using the cli.
+            Este é o seu painel administrativo. Aqui você pode gerenciar a aplicação e correção dos testes psicológicos.
         </AlertDescription>
     </Alert>
 </template>
