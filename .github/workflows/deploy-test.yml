@@ -12,16 +12,15 @@ jobs:
     steps:
     - name: Setup SSH
       run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
         eval "$(ssh-agent -s)"
-        ssh-add -D  # Remove todas as chaves previamente carregadas
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key
-        chmod 600 private_key
-        ssh-add private_key
+        ssh-add ~/.ssh/id_rsa
 
     - name: Testar conexão SSH
       run: |
-        ssh -v -p 2222 \
-        -o StrictHostKeyChecking=no \
+        ssh -o StrictHostKeyChecking=no -v -p 2222 \
         ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo 'Conexão SSH bem-sucedida!'"
 
     - name: Enviar arquivo de exemplo
