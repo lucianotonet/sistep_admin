@@ -20,7 +20,7 @@
         />
 
         <!-- Scripts -->
-        @vite(["resources/css/app.css", "resources/js/app.js"])
+        @vite(["resources/css/app.css", "resources/css/custom.css", "resources/js/app.js"])
     </head>
 
     <body class="font-sans text-gray-900 antialiased">
@@ -36,7 +36,7 @@
             <div class="mx-auto w-full max-w-xl">
                 {{ $slot }}
             </div>
-            <x-application-footer />
+            <app-footer />
         </div>
     </body>
 </html>
