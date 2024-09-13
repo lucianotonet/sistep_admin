@@ -1,9 +1,7 @@
 name: SISTEP ADMIN DEPLOY
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
