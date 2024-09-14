@@ -17,7 +17,8 @@ class TestApplicationController extends Controller
      */
     public function index()
     {
-        //
+        $testApplications = TestApplication::with(['patient', 'test'])->get(); // Carregar pacientes e testes relacionados
+        return view('test-applications.index', compact('testApplications'));
     }
 
     /**
@@ -53,6 +54,11 @@ class TestApplicationController extends Controller
     public function share(TestApplication $testApplication)
     {
         return view('test-applications.share', compact('testApplication'));
+    }
+    
+    public function qrcode(TestApplication $testApplication)
+    {
+        return view('test-applications.qrcode', compact('testApplication'));
     }
 
     /**

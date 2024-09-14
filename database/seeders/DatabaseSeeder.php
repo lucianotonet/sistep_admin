@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PatientSeeder::class,
             TestSeeder::class,
-            TestApplicationSeeder::class,
+            TestApplicationSeeder::class, // Adicione esta linha
         ]);
     }
 }

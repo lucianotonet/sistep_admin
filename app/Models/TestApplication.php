@@ -37,4 +37,10 @@ class TestApplication extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    // Definindo a relação com o paciente
+    public function patient()
+    {
+        return $this->belongsTo(Patient::class);
+    }
 }

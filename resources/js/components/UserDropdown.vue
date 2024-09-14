@@ -2,7 +2,7 @@
   <div class="hidden sm:ms-6 sm:flex sm:items-center">
     <DropdownMenu>
       <DropdownMenuTrigger
-        class="inline-flex items-center rounded border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none dark:bg-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
+        class="inline-flex items-center rounded border border-border bg-background px-3 py-2 text-sm font-medium leading-4 text-foreground transition duration-150 ease-in-out hover:bg-muted focus:outline-none"
       >
         <div>{{ user.name }}</div>
         <ChevronDownIcon class="ml-2 h-4 w-4" />
@@ -14,6 +14,7 @@
             {{ __('Perfil') }}
           </a>
         </DropdownMenuItem>
+        <hr class="my-2" />
         <DropdownMenuItem @select="logout">
           {{ __('Sair') }}
         </DropdownMenuItem>

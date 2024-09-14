@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/test-applications/create', [TestApplicationController::class, 'create'])->name('test-applications.create');
     Route::get('/test-applications/{testApplication}', [TestApplicationController::class, 'show'])->name('test-applications.show');
     Route::get('/test-applications/{testApplication}/share', [TestApplicationController::class, 'share'])->name('test-applications.share');
+    Route::get('/test-applications/{testApplication}/qrcode', [TestApplicationController::class, 'qrcode'])->name('test-applications.qrcode');
 });
 
 Route::resource('tests', TestController::class);

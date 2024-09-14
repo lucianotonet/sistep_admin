@@ -20,19 +20,21 @@
         />
 
         <!-- Scripts -->
-        @vite(["resources/css/app.css", "resources/css/custom.css", "resources/js/app.js"])
+        @vite(["resources/css/app.css", "resources/css/themes/orange.css", "resources/css/custom.css", "resources/js/app.js"])
     </head>
     <body class="font-sans antialiased">
         
-        <main id="app" class="flex flex-grow flex-col flex-1 justify-between min-h-dvh">
+        <main id="app" class="flex flex-grow flex-col flex-1 justify-between min-h-dvh">            
             <navigation
                 :user="{{ json_encode(Auth::user()) }}"
                 :routes="{{ json_encode([
                     'dashboard' => route('dashboard'),
                     'profile' => route('profile.edit'),
-                    'logout' => route('logout')
-                ]) }}"
-                current-route="{{ Route::currentRouteName() }}"
+                    'logout' => route('logout'),
+                    'tests' => route('tests.index'),
+                    'test-applications' => route('test-applications.index'),
+                    'settings' => route('dashboard'),
+                ]) }}"                
             ></navigation>
 
             {{ $slot }}

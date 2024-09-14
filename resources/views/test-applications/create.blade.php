@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="mx-auto max-w-5xl sm:px-6 lg:px-8">
             <h2
-                class="px-4 text-2xl font-semibold leading-tight text-gray-800 dark:text-gray-200 sm:px-8"
+                class="px-4 text-2xl font-semibold leading-tight  dark: sm:px-8"
             >
                 {{ __("Aplicar teste") }}
             </h2>
@@ -12,7 +12,7 @@
     <div class="py-12">
         <div class="mx-auto max-w-5xl space-y-6 sm:px-6 lg:px-8">
             <div
-                class="bg-white p-4 shadow dark:bg-gray-800 sm:rounded-md sm:p-8"
+                class="bg-black/5 p-4 shadow dark:bg-white/5 sm:rounded-md sm:p-8"
             >
                 <form
                     method="POST"
@@ -26,11 +26,11 @@
                         >
                             <div class="">
                                 <h2
-                                    class="text-xl font-semibold leading-7 text-gray-900"
+                                    class="text-2xl font-semibold leading-7 "
                                 >
                                     Tipo de teste
                                 </h2>
-                                <p class="mt-1 text-sm leading-6 text-gray-600">
+                                <p class="mt-1 text-sm leading-tight">
                                     Selecione o teste a ser aplicado.
                                 </p>
                             </div>
@@ -41,7 +41,7 @@
                                 <div class="sm:col-span-3">
                                     <label
                                         for="test"
-                                        class="hidden text-sm font-medium leading-6 text-gray-900"
+                                        class="hidden text-sm font-medium leading-6 "
                                     >
                                         Tipo
                                     </label>
@@ -49,7 +49,7 @@
                                         <select
                                             id="test_id"
                                             name="test_id"
-                                            class="block w-full rounded border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                                            class="block w-full rounded border-0 py-1.5 dark:text-background shadow-inner ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:max-w-xs sm:text-sm sm:leading-6"
                                         >
                                             <option disabled selected>
                                                 Selecione um teste
@@ -78,11 +78,11 @@
                         >
                             <div class="">
                                 <h2
-                                    class="text-xl font-semibold leading-7 text-gray-900"
+                                    class="text-2xl font-semibold leading-7 "
                                 >
                                     Paciente
                                 </h2>
-                                <p class="mt-1 text-sm leading-6 text-gray-600">
+                                <p class="mt-1 text-sm leading-tight">
                                     Selecione um paciente da lista para aplicar
                                     o teste, ou cadastre um novo. Você também
                                     pode optar por aplicar o teste de forma
@@ -96,7 +96,7 @@
                                 <div class="sm:col-span-3">
                                     <label
                                         for="patient"
-                                        class="hidden text-sm font-medium leading-6 text-gray-900"
+                                        class="hidden text-sm font-medium leading-6 "
                                     >
                                         Paciente
                                     </label>
@@ -110,7 +110,7 @@
                                         <select
                                             id="patient_id"
                                             name="patient_id"
-                                            class="block w-full rounded border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                                            class="block w-full rounded border-0 py-1.5 dark:text-background shadow-inner ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:max-w-xs sm:text-sm sm:leading-6"
                                         >
                                             <option disabled selected>
                                                 Selecione um paciente
@@ -133,7 +133,7 @@
                                 </div>
 
                                 <div id="patient-create" class="sm:col-span-3">
-                                    <!-- <label for="patient" class="block text-sm font-medium leading-6 text-gray-900">&nbsp;</label> -->
+                                    <!-- <label for="patient" class="block text-sm font-medium leading-6 ">&nbsp;</label> -->
                                     <div class="mt-2 flex items-center gap-4">
                                         <button
                                             type="button"
@@ -156,7 +156,7 @@
                                         />
                                         <label
                                             for="is_anonymous"
-                                            class="block text-sm font-medium leading-6 text-gray-900"
+                                            class="block text-sm font-medium leading-6 "
                                         >
                                             Anônimo
                                         </label>
@@ -168,7 +168,7 @@
                         <div class="flex items-center justify-end gap-x-8">
                             <button
                                 type="button"
-                                class="text-xs font-semibold uppercase leading-6 text-gray-900"
+                                class="text-xs font-semibold uppercase leading-6 "
                             >
                                 Cancela
                             </button>

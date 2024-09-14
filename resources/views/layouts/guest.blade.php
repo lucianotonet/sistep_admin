@@ -20,10 +20,10 @@
         />
 
         <!-- Scripts -->
-        @vite(["resources/css/app.css", "resources/css/custom.css", "resources/js/app.js"])
+        @vite(["resources/css/app.css", "resources/css/themes/orange.css", "resources/css/custom.css", "resources/js/app.js"])
     </head>
 
-    <body class="font-sans text-gray-900 antialiased">
+    <body class="font-sans antialiased">
         <div
             id="app"
             class="flex min-h-screen flex-col items-center justify-between"
@@ -33,7 +33,7 @@
                     <x-application-logo class="h-20 fill-current" />
                 </a>
             </div>
-            <div class="mx-auto w-full max-w-xl">
+            <div class="w-full h-full">
                 {{ $slot }}
             </div>
             <app-footer />

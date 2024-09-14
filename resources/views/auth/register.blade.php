@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="mx-auto w-full max-w-xs md:max-w-md">
-        <h1 class="mb-10 text-2xl font-bold">Registrar</h1>
+        <h1 class="mb-10 text-2xl font-bold">Criar conta</h1>
 
         <form method="POST" action="{{ route("register") }}">
             @csrf
@@ -139,16 +139,16 @@
                 />
             </div>
 
-            <div class="mt-4 flex items-center justify-end">
+            <div class="mt-4 flex items-center justify-between">
                 <a
-                    class="rounded text-sm underline focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+                    class="rounded text-sm underline focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
                     href="{{ route("login") }}"
                 >
-                    {{ __("Já registrado?") }}
+                    {{ __("Já tem uma conta?") }}
                 </a>
 
                 <x-primary-button class="ml-4">
-                    {{ __("Registrar") }}
+                    {{ __("Criar conta") }}
                 </x-primary-button>
             </div>
         </form>

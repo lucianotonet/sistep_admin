@@ -1,9 +1,9 @@
 <template>
     <Button variant="ghost" size="icon" @click="toggleTheme">
         <SunIcon v-if="theme === 'dark'"
-            class="h-4 w-4 rotate-0 scale-100 transition-all" />
+            class="h-6 w-6 rotate-0 scale-100 transition-all" />
         <MoonIcon v-else
-            class="h-4 w-4 rotate-0 scale-100 transition-all" />
+            class="h-5 w-5 rotate-0 scale-100 transition-all" />
         <span class="sr-only">Alternar tema</span>
     </Button>
 </template>

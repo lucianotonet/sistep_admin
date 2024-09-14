@@ -108,7 +108,7 @@ class TestSeeder extends Seeder
                 'weight' => [0, 1, 2, 3]
             ],
             [
-                'text' => 'Tive a tendência de reagir de forma exagerada às situações',
+                'text' => 'Tive a tendência a reagir de forma exagerada às situações',
                 'type' => 'likert',
                 'options' => $commonOptions,
                 'category' => 'estresse',

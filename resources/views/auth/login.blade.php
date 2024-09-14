@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="mx-auto w-full max-w-xs md:max-w-md">
-        <h1 class="mb-10 text-2xl font-bold">Login</h1>
+        <h1 class="mb-10 text-2xl font-bold">Entrar</h1>
 
         <!-- Status da Sessão -->
         <x-auth-session-status class="mb-2" :status="session('status')" />
@@ -47,22 +47,22 @@
             </div>
 
             <!-- Lembrar-me -->
-            <div class="mt-2 block">
+            <!-- <div class="mt-2 block">
                 <label for="remember_me" class="inline-flex items-center">
                     <input
                         id="remember_me"
                         type="checkbox"
-                        class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
+                        class="rounded border-gray-300 text-primary-600 shadow-sm focus:ring-primary-500 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-primary-600 dark:focus:ring-offset-gray-800"
                         name="remember"
                     />
                     <span class="ms-2 text-sm">{{ __("Lembrar-me") }}</span>
                 </label>
-            </div>
+            </div> -->
 
-            <div class="mt-2 flex items-center justify-end">
+            <div class="mt-6 flex items-center justify-between">
                 @if (Route::has("password.request"))
                     <a
-                        class="rounded text-sm underline focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+                        class="rounded text-sm underline focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
                         href="{{ route("password.request") }}"
                     >
                         {{ __("Esqueceu sua senha?") }}

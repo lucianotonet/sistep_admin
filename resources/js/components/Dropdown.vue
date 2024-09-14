@@ -5,7 +5,7 @@
     </div>
 
     <div v-show="modelValue" class="absolute z-50 mt-2 rounded-md shadow-lg" :class="[widthClass, alignmentClasses]">
-      <div class="rounded-md ring-1 ring-black ring-opacity-5" :class="contentClasses">
+      <div class="rounded-md ring-1 ring-border bg-popover text-popover-foreground" :class="contentClasses">
         <slot name="content"></slot>
       </div>
     </div>
@@ -23,7 +23,7 @@ const props = defineProps({
     default: '48'
   },
   contentClasses: {
-    default: 'py-1 bg-white dark:bg-gray-700'
+    default: 'py-1'
   },
   modelValue: Boolean
 });

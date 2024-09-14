@@ -32,7 +32,7 @@
                             <td class="whitespace-nowrap px-6 py-4">
                                 <a
                                     href="{{ route("tests.edit", $test) }}"
-                                    class="mr-3 text-indigo-600 hover:text-indigo-900"
+                                    class="mr-3 text-primary-600 hover:text-primary-900"
                                 >
                                     Editar
                                 </a>

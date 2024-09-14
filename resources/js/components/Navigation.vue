@@ -1,9 +1,9 @@
 <template>
-  <nav class="border-b border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
+  <nav class="border-b border-border bg-background">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between">
         <div class="flex">
-          <Logo :dashboard-route="routes.dashboard" />
+          <ApplicationMark :dashboard-route="routes.dashboard" />
           <NavLinks :dashboard-route="routes.dashboard" :is-active="isActive('dashboard')" />
         </div>
         <UserDropdown v-if="user" :user="user" :profile-route="routes.profile" :logout-route="routes.logout" />
@@ -16,6 +16,7 @@
       :dashboard-route="routes.dashboard" 
       :profile-route="routes.profile" 
       :is-active="isActive('dashboard')"
+      :logout-route="routes.logout"
       @close="menuOpen = false"
     />
   </nav>
@@ -23,11 +24,11 @@
 
 <script setup>
 import { ref } from 'vue';
-import Logo from './Logo.vue';
 import NavLinks from './NavLinks.vue';
 import UserDropdown from './UserDropdown.vue';
 import HamburgerButton from './HamburgerButton.vue';
 import ResponsiveNavLinks from './ResponsiveNavLinks.vue';
+import ApplicationMark from './ApplicationMark.vue';
 
 const props = defineProps({
   user: Object,

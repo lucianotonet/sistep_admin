@@ -1,18 +1,28 @@
 <template>
-  <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-    <nav-link :href="dashboardRoute" :active="isActive">
-      {{ __('Painel') }}
-    </nav-link>
-  </div>
+    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+        <nav-link :href="'/dashboard'" :active="isActive('dashboard')">
+            {{ __('Dashboard') }}
+        </nav-link>
+        <nav-link :href="'/test-applications'" :active="isActive('test-applications')">
+            {{ __('Aplicações') }}
+        </nav-link>
+        <nav-link :href="'/tests'" :active="isActive('tests')">
+            {{ __('Testes') }}
+        </nav-link>
+        <nav-link :href="'/settings'" :active="isActive('settings')">
+            {{ __('Configurações') }}
+        </nav-link>
+    </div>
 </template>
 
 <script setup>
 import NavLink from './NavLink.vue';
 
-const props = defineProps({
-  dashboardRoute: String,
-  isActive: Boolean
-});
-
 const __ = (key) => key; // Placeholder for translation function
+
+function isActive(routeName) {
+    const currentUrl = window.location.pathname.replace(/^\/+/, ''); // Obtém a URL atual e remove a "/"
+    console.log(currentUrl, routeName);
+    return currentUrl === routeName.replace(/^\/+/, '') || currentUrl.indexOf(routeName.replace(/^\/+/, '')) === 0; // Verifica se a URL atual corresponde ao nome da rota ou se é uma subpágina
+}
 </script>

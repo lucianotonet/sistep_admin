@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('tests', function (Blueprint $table) {
             $table->id(); // Identificador único do teste
-            $table->string('name'); // Nome do teste
+            $table->string('name'); // Nome do teste (não pode ser nulo)
             $table->text('description'); // Descrição do teste
             $table->json('category'); // Categoria(s) do teste
-            $table->string('format'); // Formato do teste (e.g., "likert", "multiple_choice", "open_response")
+            $table->string('format'); // Formato do teste
             $table->json('questions'); // Questões do teste
             $table->timestamps(); // Campos de data de criação e atualização
         });

@@ -17,7 +17,11 @@ class TestFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->sentence(3), // Adicione um nome fictício
+            'description' => $this->faker->paragraph, // Adicione uma descrição fictícia
+            'category' => json_encode(['exemplo']), // Adicione uma categoria fictícia
+            'format' => 'likert', // Defina um formato padrão
+            'questions' => json_encode([]), // Adicione perguntas fictícias
         ];
     }
 }
