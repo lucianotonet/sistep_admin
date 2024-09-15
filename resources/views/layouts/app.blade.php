@@ -37,6 +37,26 @@
                 ]) }}"                
             ></navigation>
 
+            <div class="flex flex-col container mx-auto w-full py-4 px-3">
+                @if(session('success'))
+                <flash-alert type="primary">
+                    <template #title>{{ session('success') }}</template>
+                </flash-alert>
+                @endif
+                
+                @if(session('warning'))
+                <flash-alert type="ghost">
+                    {{ session('warning') }}
+                </flash-alert>
+                @endif
+                
+                @if(session('error'))
+                <flash-alert type="destructive">
+                    {{ session('error') }}
+                </flash-alert>
+                @endif
+            </div>
+
             {{ $slot }}
 
             <app-footer />

@@ -16,7 +16,7 @@ class Patient extends Model
         'phone',   // Telefone do paciente
         'age',     // Idade do paciente
         'gender',     // Sexo do paciente
-        'is_anonymous', // Indica se o paciente é anônimo
+        'is_anonymous', // Adicione este campo
     ];
 
     // Definindo a relação com o modelo User

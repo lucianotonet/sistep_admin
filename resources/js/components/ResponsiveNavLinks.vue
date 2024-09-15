@@ -8,7 +8,7 @@
                 {{ __('Pacientes') }}
             </ResponsiveNavLink>
             <ResponsiveNavLink :href="'/test-applications'" :active="isActive" @click="$emit('close')">
-                {{ __('Testes') }}
+                {{ __('Aplicações de Teste') }}
             </ResponsiveNavLink>
         </div>
         <div v-if="user" class="border-t border-border pb-1 pt-4">

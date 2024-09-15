@@ -2,6 +2,7 @@ import "./bootstrap";
 import { createApp } from "vue";
 
 import Alert from "./components/Alert.vue";
+import FlashAlert from "./components/FlashAlert.vue";
 import AppFooter from "./components/AppFooter.vue";
 import Navigation from "./components/Navigation.vue";
 import ApplicationMark from "./components/ApplicationMark.vue";
@@ -19,6 +20,7 @@ Alpine.start();
 const app = createApp({});
 
 app.component("Alert", Alert);
+app.component("FlashAlert", FlashAlert);
 app.component("AppFooter", AppFooter);
 app.component("Navigation", Navigation);
 app.component("ApplicationMark", ApplicationMark);

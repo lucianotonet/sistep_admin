@@ -19,11 +19,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'user_type',
-        'crp',
-        'institution',
         'password',
-        'is_admin',
+        'is_admin', // Adicione este campo
     ];
 
     /**

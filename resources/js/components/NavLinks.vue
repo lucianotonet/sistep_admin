@@ -7,7 +7,7 @@
             {{ __('Pacientes') }}
         </nav-link>
         <nav-link :href="'/test-applications'" :active="isActive('test-applications')">
-            {{ __('Testes') }}
+            {{ __('Aplicações de Teste') }}
         </nav-link>
     </div>
 </template>

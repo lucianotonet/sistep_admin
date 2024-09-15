@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id(); // Identificador único do paciente
             $table->foreignId('user_id')->nullable()->constrained('users'); // Referência ao usuário associado, pode ser nulo para pacientes anônimos
-            $table->string('name')->nullable(); // Nome completo do paciente (opcional para testes anônimos)
-            $table->string('email')->nullable(); // Email do paciente (opcional)
-            $table->string('phone')->nullable(); // Telefone do paciente (opcional)
+            $table->string('name')->nullable(); // Nome pode ser nulo para pacientes anônimos
+            $table->string('email')->nullable(); // Email pode ser nulo para pacientes anônimos
+            $table->string('phone')->nullable(); // Telefone pode ser nulo para pacientes anônimos
             $table->integer('age')->nullable(); // Idade do paciente
             $table->string('gender', 10)->nullable(); // Sexo do paciente
             $table->boolean('is_anonymous')->default(false); // Indica se o paciente é anônimo

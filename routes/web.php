@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestApplicationController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\PatientController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -46,5 +47,10 @@ Route::get('/changelog', function () {
 })->name('changelog');
 
 Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('patients', PatientController::class);
+    // Adicione outras rotas que requerem acesso de administrador aqui
+});
 
 require __DIR__.'/auth.php';

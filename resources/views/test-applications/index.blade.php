@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="container mx-auto px-4 py-8">
         <div class="mb-8 flex items-center gap-4 justify-between">
-            <h1 class="text-3xl font-bold text-foreground">Aplicações de Testes</h1>
+            <h1 class="text-3xl font-bold text-foreground">Aplicações de Teste</h1>
        
             <!-- Formulário de busca -->
             <form method="GET" action="{{ route('test-applications.index') }}" class="ml-auto">
