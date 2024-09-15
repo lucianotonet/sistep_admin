@@ -10,19 +10,19 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class PatientFactory extends Factory
 {
     /**
-     * Define the model's default state.
+     * Define o estado padrão do modelo.
      *
      * @return array<string, mixed>
      */
     public function definition(): array
     {
         return [
-            'name' => $this->faker->optional()->name, // Nome completo do paciente (opcional para testes anônimos)
-            'email' => $this->faker->optional()->safeEmail, // Email do paciente (opcional)
-            'phone' => $this->faker->optional()->phoneNumber, // Telefone do paciente (opcional)
-            'age' => $this->faker->optional()->numberBetween(1, 100), // Idade do paciente (opcional)
-            'gender' => $this->faker->optional()->randomElement(['masculino', 'feminino', null]), // Sexo do paciente (opcional)
-            'is_anonymous' => $this->faker->boolean(50), // Indica se o paciente é anônimo
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'phone' => $this->faker->phoneNumber(),
+            'age' => $this->faker->numberBetween(18, 100),
+            'gender' => $this->faker->randomElement(['masculino', 'feminino', null]),
+            'is_anonymous' => $this->faker->boolean(50),
         ];
     }
 }

@@ -26,39 +26,39 @@ class TestSeeder extends Seeder
         ]);
 
         // Criar o teste de Autoestima de Rosenberg
-        Test::create([
-            'name' => 'Escala de Autoestima de Rosenberg',
-            'description' => 'Questionário para avaliar a autoestima do indivíduo.',
-            'category' => json_encode(['autoestima']),
-            'format' => 'likert',
-            'questions' => json_encode($this->getRosenbergQuestions()),
-        ]);
+        // Test::create([
+        //     'name' => 'Escala de Autoestima de Rosenberg',
+        //     'description' => 'Questionário para avaliar a autoestima do indivíduo.',
+        //     'category' => json_encode(['autoestima']),
+        //     'format' => 'likert',
+        //     'questions' => json_encode($this->getRosenbergQuestions()),
+        // ]);
 
-        // Criar o Inventário de Ansiedade de Beck (BAI)
-        Test::create([
-            'name' => 'Inventário de Ansiedade de Beck (BAI)',
-            'description' => 'Questionário para avaliar os sintomas de ansiedade.',
-            'category' => json_encode(['ansiedade']),
-            'format' => 'likert',
-            'questions' => json_encode($this->getBAIQuestions()),
-        ]);
+        // // Criar o Inventário de Ansiedade de Beck (BAI)
+        // Test::create([
+        //     'name' => 'Inventário de Ansiedade de Beck (BAI)',
+        //     'description' => 'Questionário para avaliar os sintomas de ansiedade.',
+        //     'category' => json_encode(['ansiedade']),
+        //     'format' => 'likert',
+        //     'questions' => json_encode($this->getBAIQuestions()),
+        // ]);
 
-        // Adicionar outros testes
-        Test::create([
-            'name' => 'Inventário de Depressão de Beck (BDI)',
-            'description' => 'Questionário para avaliar os sintomas de depressão.',
-            'category' => json_encode(['depressão']),
-            'format' => 'likert',
-            'questions' => json_encode($this->getBDIQuestions()),
-        ]);
+        // // Adicionar outros testes
+        // Test::create([
+        //     'name' => 'Inventário de Depressão de Beck (BDI)',
+        //     'description' => 'Questionário para avaliar os sintomas de depressão.',
+        //     'category' => json_encode(['depressão']),
+        //     'format' => 'likert',
+        //     'questions' => json_encode($this->getBDIQuestions()),
+        // ]);
 
-        Test::create([
-            'name' => 'Escala de Ansiedade de Hamilton',
-            'description' => 'Questionário para avaliar a gravidade da ansiedade.',
-            'category' => json_encode(['ansiedade']),
-            'format' => 'likert',
-            'questions' => json_encode($this->getHamiltonQuestions()),
-        ]);
+        // Test::create([
+        //     'name' => 'Escala de Ansiedade de Hamilton',
+        //     'description' => 'Questionário para avaliar a gravidade da ansiedade.',
+        //     'category' => json_encode(['ansiedade']),
+        //     'format' => 'likert',
+        //     'questions' => json_encode($this->getHamiltonQuestions()),
+        // ]);
     }
 
     private function getDASS21Questions()

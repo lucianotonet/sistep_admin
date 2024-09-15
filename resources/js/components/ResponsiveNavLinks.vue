@@ -3,10 +3,7 @@
         <div class="space-y-1 pb-3 pt-2">
             <ResponsiveNavLink :href="dashboardRoute" :active="isActive" @click="$emit('close')">
                 {{ __('Painel') }}
-            </ResponsiveNavLink>
-            <ResponsiveNavLink :href="'/patients'" :active="isActive" @click="$emit('close')">
-                {{ __('Pacientes') }}
-            </ResponsiveNavLink>
+            </ResponsiveNavLink>            
             <ResponsiveNavLink :href="'/test-applications'" :active="isActive" @click="$emit('close')">
                 {{ __('Aplicações de Teste') }}
             </ResponsiveNavLink>

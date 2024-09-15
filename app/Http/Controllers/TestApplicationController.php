@@ -78,7 +78,14 @@ class TestApplicationController extends Controller
      */
     public function show(TestApplication $testApplication)
     {
-        //
+        // Carregar o paciente e o teste relacionados
+        $testApplication->load(['patient', 'test']);
+
+        // Retornar a view com os dados da aplicação do teste e o paciente
+        return view('test-applications.show', [
+            'testApplication' => $testApplication,
+            'patient' => $testApplication->patient // Adicionando o paciente aqui
+        ]);
     }
 
     /**

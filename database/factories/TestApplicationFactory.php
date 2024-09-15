@@ -23,7 +23,7 @@ class TestApplicationFactory extends Factory
             'test_id' => Test::factory(), // Referência ao objeto Test
             'patient_id' => Patient::factory(), // Referência ao paciente
             'user_id' => User::factory(), // Referência ao usuário
-            'application_date' => $this->faker->dateTime, // Data de aplicação
+            'application_date' => $this->faker->dateTimeBetween('-1 year', 'now'), // Data de aplicação
             'responses' => json_encode([]), // Respostas fictícias
             'result' => json_encode([]), // Resultado fictício
             'status' => $this->faker->randomElement(['Pendente', 'Concluído']), // Status da aplicação

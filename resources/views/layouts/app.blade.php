@@ -37,6 +37,7 @@
                 ]) }}"                
             ></navigation>
 
+            @if(session('success') || session('warning') || session('error'))
             <div class="flex flex-col container mx-auto w-full py-4 px-3">
                 @if(session('success'))
                 <flash-alert type="primary">
@@ -56,6 +57,7 @@
                 </flash-alert>
                 @endif
             </div>
+            @endif
 
             {{ $slot }}
 

@@ -2,10 +2,7 @@
     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
         <nav-link :href="'/dashboard'" :active="isActive('dashboard')">
             {{ __('Dashboard') }}
-        </nav-link>
-        <nav-link :href="'/patients'" :active="isActive('patients')">
-            {{ __('Pacientes') }}
-        </nav-link>
+        </nav-link>        
         <nav-link :href="'/test-applications'" :active="isActive('test-applications')">
             {{ __('Aplicações de Teste') }}
         </nav-link>
