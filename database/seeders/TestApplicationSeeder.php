@@ -15,9 +15,15 @@ class TestApplicationSeeder extends Seeder
      */
     public function run(): void
     {
-        // Criar aplicações de teste com dados fictícios
-        TestApplication::factory()->count(10)->create([
-            'user_id' => User::factory(), // Associar a um usuário fictício
-        ]);
+        foreach (User::all() as $user) {
+            $patient = $user->patients()->inRandomOrder()->first();
+            foreach (Test::all() as $test) {
+                TestApplication::factory(rand(0, 10))->create([
+                    'user_id' => $user->id,
+                    'patient_id' => $patient->id,
+                    'test_id' => $test->id,
+                ]);
+            }
+        }
     }
 }

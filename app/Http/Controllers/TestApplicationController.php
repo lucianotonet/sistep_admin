@@ -15,10 +15,22 @@ class TestApplicationController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $testApplications = TestApplication::with(['patient', 'test'])->get(); // Carregar pacientes e testes relacionados
-        return view('test-applications.index', compact('testApplications'));
+        // Obter a busca do usuário
+        $search = $request->input('search');
+
+        // Carregar pacientes e testes relacionados, com busca e agrupamento
+        $testApplications = TestApplication::with(['patient', 'test'])
+            ->when($search, function ($query) use ($search) {
+                return $query->whereHas('patient', function ($q) use ($search) {
+                    $q->where('name', 'like', "%{$search}%");
+                });
+            })
+            ->orderBy('created_at', 'desc') // Ordenar por data
+            ->paginate(10); // Paginação de 10 por página
+
+        return view('test-applications.index', compact('testApplications', 'search'));
     }
 
     /**

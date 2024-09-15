@@ -1,16 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
-        <div class="mx-auto max-w-5xl sm:px-6 lg:px-8">
-            <h2
-                class="px-4 text-2xl font-semibold leading-tight  dark: sm:px-8"
-            >
-                {{ __("Aplicar teste") }}
-            </h2>
-        </div>
-    </x-slot>
-
-    <div class="py-12">
+    <div class="py-4 mb-auto">
         <div class="mx-auto max-w-5xl space-y-6 sm:px-6 lg:px-8">
+            <div class="py-8 px-4 flex items-center justify-between">
+                <h2 class="text-3xl font-bold leading-tight">{{ __("Aplicar teste") }}</h2>                
+            </div>
             <div
                 class="bg-black/5 p-4 shadow dark:bg-white/5 sm:rounded-md sm:p-8"
             >
@@ -49,7 +42,7 @@
                                         <select
                                             id="test_id"
                                             name="test_id"
-                                            class="block w-full rounded border-0 py-1.5 dark:text-background shadow-inner ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                                            class="block w-full rounded border-0 py-1.5 dark:text-background shadow-inner ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:max-w-xs sm:text-sm sm:leading-6"
                                         >
                                             <option disabled selected>
                                                 Selecione um teste
@@ -110,7 +103,7 @@
                                         <select
                                             id="patient_id"
                                             name="patient_id"
-                                            class="block w-full rounded border-0 py-1.5 dark:text-background shadow-inner ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                                            class="block w-full rounded border-0 py-1.5 dark:text-background shadow-inner ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:max-w-xs sm:text-sm sm:leading-6"
                                         >
                                             <option disabled selected>
                                                 Selecione um paciente
@@ -150,7 +143,7 @@
                                             type="checkbox"
                                             name="is_anonymous"
                                             id="is_anonymous"
-                                            class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-600"
+                                            class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
                                             onchange="togglePatientSelection()"
                                             {{ old("is_anonymous") ? "checked" : "" }}
                                         />
@@ -174,7 +167,7 @@
                             </button>
                             <button
                                 type="submit"
-                                class="rounded bg-blue-600 px-6 py-1.5 text-xs font-semibold uppercase shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                class="rounded bg-primary px-6 py-1.5 text-xs font-semibold uppercase shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                             >
                                 Salvar e enviar
                             </button>

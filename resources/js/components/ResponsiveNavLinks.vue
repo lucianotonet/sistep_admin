@@ -4,6 +4,9 @@
             <ResponsiveNavLink :href="dashboardRoute" :active="isActive" @click="$emit('close')">
                 {{ __('Painel') }}
             </ResponsiveNavLink>
+            <ResponsiveNavLink :href="'/patients'" :active="isActive" @click="$emit('close')">
+                {{ __('Pacientes') }}
+            </ResponsiveNavLink>
             <ResponsiveNavLink :href="'/test-applications'" :active="isActive" @click="$emit('close')">
                 {{ __('Testes') }}
             </ResponsiveNavLink>
@@ -18,8 +21,11 @@
                 </div>
             </div>
             <div class="mt-3 space-y-1">
-                <ResponsiveNavLink :href="profileRoute" @click="$emit('close')">
-                    {{ __('Perfil') }}
+                <ResponsiveNavLink :href="'/profile'" @click="$emit('close')">
+                    {{ __('Meu Perfil') }}
+                </ResponsiveNavLink>
+                <ResponsiveNavLink :href="'/settings'" @click="$emit('close')">
+                    {{ __('Configurações') }}
                 </ResponsiveNavLink>
                 <hr class="my-2" />
                 <ResponsiveNavLink as="button" @click="logout">

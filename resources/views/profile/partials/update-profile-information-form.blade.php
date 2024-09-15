@@ -77,87 +77,87 @@
             @endif
         </div>
 
-        @if ($user->hasVerifiedEmail())
-            <!-- User Type (Student or Psychologist) -->
-            <div class="mt-4">
-                <x-input-label :value="__('Eu sou')" />
-                <div class="mt-2 flex items-center">
-                    <input
-                        id="student"
-                        type="radio"
-                        name="user_type"
-                        value="student"
-                        {{ old("user_type", auth()->user()->user_type) === "student" ? "checked" : "" }}
-                        onclick="toggleCrpField(false); toggleInstitutionField(true);"
-                    />
-                    <label
-                        for="student"
-                        class="ml-2 text-sm text-gray-600 dark:text-gray-400"
-                    >
-                        {{ __("Estudante") }}
-                    </label>
-                </div>
-                <div class="mt-2 flex items-center">
-                    <input
-                        id="psychologist"
-                        type="radio"
-                        name="user_type"
-                        value="psychologist"
-                        {{ old("user_type", auth()->user()->user_type) === "psychologist" ? "checked" : "" }}
-                        onclick="toggleCrpField(true); toggleInstitutionField(false);"
-                    />
-                    <label
-                        for="psychologist"
-                        class="ml-2 text-sm text-gray-600 dark:text-gray-400"
-                    >
-                        {{ __("Psicólogo") }}
-                    </label>
-                </div>
+    
+        <!-- User Type (Student or Psychologist) -->
+        <div class="mt-4">
+            <x-input-label :value="__('Eu sou')" />
+            <div class="mt-2 flex items-center">
+                <input
+                    id="student"
+                    type="radio"
+                    name="user_type"
+                    value="student"
+                    {{ old("user_type", auth()->user()->user_type) === "student" ? "checked" : "" }}
+                    onclick="toggleCrpField(false); toggleInstitutionField(true);"
+                />
+                <label
+                    for="student"
+                    class="ml-2 text-sm text-gray-600 dark:text-gray-400"
+                >
+                    {{ __("Estudante") }}
+                </label>
             </div>
+            <div class="mt-2 flex items-center">
+                <input
+                    id="psychologist"
+                    type="radio"
+                    name="user_type"
+                    value="psychologist"
+                    {{ old("user_type", auth()->user()->user_type) === "psychologist" ? "checked" : "" }}
+                    onclick="toggleCrpField(true); toggleInstitutionField(false);"
+                />
+                <label
+                    for="psychologist"
+                    class="ml-2 text-sm text-gray-600 dark:text-gray-400"
+                >
+                    {{ __("Psicólogo") }}
+                </label>
+            </div>
+        </div>
 
-            <!-- CRP Field (Hidden by Default) -->
-            <div
-                id="crp-field"
-                class="mt-4"
-                style="
-                    display: {{ old("user_type", auth()->user()->user_type) === "psychologist" ? "block" : "none" }};
-                "
-            >
-                <x-input-label for="crp" :value="__('Número do CRP')" />
-                <x-text-input
-                    id="crp"
-                    name="crp"
-                    type="text"
-                    class="mt-1 block w-full"
-                    :value="old('crp', auth()->user()->crp)"
-                    autocomplete="crp"
-                />
-                <x-input-error class="mt-2" :messages="$errors->get('crp')" />
-            </div>
+        <!-- CRP Field (Hidden by Default) -->
+        <div
+            id="crp-field"
+            class="mt-4"
+            style="
+                display: {{ old("user_type", auth()->user()->user_type) === "psychologist" ? "block" : "none" }};
+            "
+        >
+            <x-input-label for="crp" :value="__('Número do CRP')" />
+            <x-text-input
+                id="crp"
+                name="crp"
+                type="text"
+                class="mt-1 block w-full"
+                :value="old('crp', auth()->user()->crp)"
+                autocomplete="crp"
+            />
+            <x-input-error class="mt-2" :messages="$errors->get('crp')" />
+        </div>
 
-            <!-- Institution Field (Hidden by Default) -->
-            <div
-                id="institution-field"
-                class="mt-4"
-                style="
-                    display: {{ old("user_type", auth()->user()->user_type) === "student" ? "block" : "none" }};
-                "
-            >
-                <x-input-label for="institution" :value="__('Instituição')" />
-                <x-text-input
-                    id="institution"
-                    name="institution"
-                    type="text"
-                    class="mt-1 block w-full"
-                    :value="old('institution', auth()->user()->institution)"
-                    autocomplete="institution"
-                />
-                <x-input-error
-                    class="mt-2"
-                    :messages="$errors->get('institution')"
-                />
-            </div>
-        @endif
+        <!-- Institution Field (Hidden by Default) -->
+        <div
+            id="institution-field"
+            class="mt-4"
+            style="
+                display: {{ old("user_type", auth()->user()->user_type) === "student" ? "block" : "none" }};
+            "
+        >
+            <x-input-label for="institution" :value="__('Instituição')" />
+            <x-text-input
+                id="institution"
+                name="institution"
+                type="text"
+                class="mt-1 block w-full"
+                :value="old('institution', auth()->user()->institution)"
+                autocomplete="institution"
+            />
+            <x-input-error
+                class="mt-2"
+                :messages="$errors->get('institution')"
+            />
+        </div>
+        
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __("Salvar") }}</x-primary-button>

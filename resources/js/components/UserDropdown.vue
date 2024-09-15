@@ -10,8 +10,13 @@
 
       <DropdownMenuContent class="w-48">
         <DropdownMenuItem :as-child="true">
-          <a :href="profileRoute" class="w-full">
-            {{ __('Perfil') }}
+          <a :href="'/profile'" class="w-full">
+            {{ __('Meu Perfil') }}
+          </a>
+        </DropdownMenuItem>
+        <DropdownMenuItem :as-child="true">
+          <a :href="'/settings'" class="w-full">
+            {{ __('Configurações') }}
           </a>
         </DropdownMenuItem>
         <hr class="my-2" />

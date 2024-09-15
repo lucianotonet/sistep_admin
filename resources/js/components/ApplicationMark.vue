@@ -1,5 +1,5 @@
 <template>
-    <a :href="dashboardRoute" class="flex flex-col items-center justify-center transition-all h-8 w-auto border rounded-sm p-2 border-border my-auto">
+    <a :href="linkTo" class="flex flex-col items-center justify-center transition-all h-8 w-auto border rounded-sm p-2 border-border my-auto">
         <h3 v-if="miniLogo" class="font-mono text-2xl font-bold text-foreground">S</h3>
         <h3 v-else class="font-mono text-2xl font-bold text-foreground">SISTEP</h3>
     </a>
@@ -11,9 +11,11 @@ import { ref } from 'vue';
 const { miniLogo } = defineProps({
     miniLogo: {
         type: Boolean,
-        default: true
+        default: false
+    },
+    linkTo: {
+        type: String,
+        default: '/dashboard'
     }
 });
-
-const dashboardRoute = ref('/');
 </script>

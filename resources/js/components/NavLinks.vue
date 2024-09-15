@@ -3,14 +3,11 @@
         <nav-link :href="'/dashboard'" :active="isActive('dashboard')">
             {{ __('Dashboard') }}
         </nav-link>
+        <nav-link :href="'/patients'" :active="isActive('patients')">
+            {{ __('Pacientes') }}
+        </nav-link>
         <nav-link :href="'/test-applications'" :active="isActive('test-applications')">
-            {{ __('Aplicações') }}
-        </nav-link>
-        <nav-link :href="'/tests'" :active="isActive('tests')">
             {{ __('Testes') }}
-        </nav-link>
-        <nav-link :href="'/settings'" :active="isActive('settings')">
-            {{ __('Configurações') }}
         </nav-link>
     </div>
 </template>

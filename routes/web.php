@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestApplicationController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -43,5 +44,7 @@ Route::get('/cookies', function () {
 Route::get('/changelog', function () {
     return view('changelog');
 })->name('changelog');
+
+Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
 
 require __DIR__.'/auth.php';

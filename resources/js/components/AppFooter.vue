@@ -3,7 +3,7 @@
         <div class="flex flex-row px-4 text-muted-foreground">
             <div class="flex w-auto md:w-full flex-col text-left">
                 <p class="text-sm">&copy; {{ new Date().getFullYear() }} SISTEP. Todos os direitos reservados.
-                    <a href="/changelog" class="text-xs hover:text-foreground transition-colors">v0.0.1</a>
+                    <a href="/changelog" class="text-xs hover:text-foreground transition-colors">v1.0.0</a>
                 </p>
                 <small class="mt-1 flex flex-col md:flex-row gap-1 md:gap-4 text-xs">
                     <a href="/tcle" class="hover:text-foreground transition-colors">

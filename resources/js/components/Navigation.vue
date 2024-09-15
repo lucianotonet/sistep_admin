@@ -3,7 +3,7 @@
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between">
         <div class="flex">
-          <ApplicationMark :dashboard-route="routes.dashboard" />
+          <ApplicationMark />
           <NavLinks :dashboard-route="routes.dashboard" :is-active="isActive('dashboard')" />
         </div>
         <UserDropdown v-if="user" :user="user" :profile-route="routes.profile" :logout-route="routes.logout" />

@@ -14,9 +14,9 @@ class PatientSeeder extends Seeder
      */
     public function run(): void
     {
-        // Criar 10 pacientes para cada usuário existente no banco de dados
+        // Criar 5 pacientes para cada usuário existente no banco de dados
         User::all()->each(function ($user) {
-            Patient::factory()->count(10)->create([
+            Patient::factory()->count(5)->create([
                 'user_id' => $user->id, // Associar cada paciente ao usuário existente
             ]);
         });
