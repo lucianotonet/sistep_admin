@@ -4,15 +4,15 @@
             <h1 class="text-3xl font-bold text-foreground">Teste #{{ $testApplication->id }} ({{ $testApplication->test->name }})</h1>
         </div>
 
-        <div class="flex flex-wrap mb-6 gap-6">
-            <div class="bg-foreground/5 shadow-md flex flex-col rounded-lg p-6 w-full md:w-1/2">
+        <div class="flex flex-row w-full mb-6 gap-6">
+            <div class="bg-foreground/5 shadow-md flex flex-col rounded-lg p-6 md:w-1/2">
                 <h2 class="text-2xl font-semibold mb-4 text-foreground">Dados do Paciente</h2>
                 <p><strong>Nome:</strong> {{ $testApplication->patient->name ?? 'Anônimo' }}</p>
                 <p><strong>Email:</strong> {{ $testApplication->patient->email ?? 'Não disponível' }}</p>
                 <p><strong>Telefone:</strong> {{ $testApplication->patient->phone ?? 'Não disponível' }}</p>
             </div>
 
-            <div class="bg-foreground/5 shadow-md flex flex-col rounded-lg p-6 w-full md:w-1/2">
+            <div class="bg-foreground/5 shadow-md flex flex-col rounded-lg p-6 md:w-1/2">
                 <h2 class="text-2xl font-semibold mb-4 text-foreground">Resultados do Teste</h2>
                 <p><strong>Status:</strong> {{ $testApplication->status }}</p>
                 @if($testApplication->result)

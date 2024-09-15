@@ -73,3 +73,4 @@ Contribuições são bem-vindas! Para começar, faça um fork deste repositório
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
