@@ -53,4 +53,6 @@ Route::middleware(['auth'])->group(function () {
     // Adicione outras rotas que requerem acesso de administrador aqui
 });
 
+Route::post('/accept-tcle', [App\Http\Controllers\TcleController::class, 'accept'])->middleware('auth')->name('accept.tcle');
+
 require __DIR__.'/auth.php';

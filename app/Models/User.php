@@ -20,7 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'is_admin', // Adicione este campo
+        'tcle_accepted',
+        'tcle_accepted_at',
     ];
 
     /**
